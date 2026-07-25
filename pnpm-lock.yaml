@@ -19,7 +19,7 @@ importers:
         version: 19.2.4(react@19.2.4)
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: ^4.3.3
         version: 4.3.3
       '@types/node':
         specifier: ^20
@@ -30,8 +30,11 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.2.3(@types/react@19.2.17)
+      daisyui:
+        specifier: ^5.7.4
+        version: 5.7.4
       tailwindcss:
-        specifier: ^4
+        specifier: ^4.3.3
         version: 4.3.3
       typescript:
         specifier: ^5
@@ -365,6 +368,9 @@ packages:
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
+
+  daisyui@5.7.4:
+    resolution: {integrity: sha512-zKzFIwvEvn2QvE1TbUUtDnYFOqWoxeZh+j4QXfhkZKYAT++pO2ijyT9rkFm0GIPDWR1/oo9hHZzd96AsTK0iZg==}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -790,6 +796,8 @@ snapshots:
   client-only@0.0.1: {}
 
   csstype@3.2.3: {}
+
+  daisyui@5.7.4: {}
 
   detect-libc@2.1.2: {}
 
