@@ -1,25 +1,18 @@
 export default function Navbar()
 {
     return(
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm px-5">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl">Mdbahrulilmi</a>
             </div>
             <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-                <li>
-                    <details>
-                    <summary>Parent</summary>
-                    <ul className="bg-base-100 rounded-t-none p-2">
-                        <li><a>Link 1</a></li>
-                        <li><a>Link 2</a></li>
-                    </ul>
-                    </details>
-                </li>
+                <ul className="menu menu-horizontal px-1 gap-4">
+                    <li><a href="#">Showcase</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Connect</a></li>
                 </ul>
             </div>
-            </div>
+        </div>
     )
 }
