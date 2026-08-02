@@ -1,0 +1,23 @@
+{
+    "back": "Kembali",
+    "badge": "About Me",
+    "heading": "Halo, Saya Muhammad Bahrul Ilmi",
+    "subheading":
+    "Saya membantu bisnis dan founder mengubah alur kerja rumit menjadi aplikasi web yang cepat, efisien, dan mudah digunakan oleh tim maupun pengguna akhir.",
+    "approachTitle": "Pendekatan Kerja",
+    "approachText1":
+    "Bikin web itu bukan cuma soal tampilannya cantik di layar, tapi juga dalemannya. Bagi saya, kodingan yang baik harus punya arsitektur backend yang stabil, query database yang efisien, dan antarmuka yang responsif di segala ukuran layar.",
+    "approachText2":
+    "Setiap proyek saya garap dari sudut pandang bisnis—bukan sekadar nulis kode, tapi juga memastikan solusi teknis yang dibuat benar-benar menyelesaikan masalah dan siap di-scale.",
+    "principlesTitle": "Prinsip & Nilai Kerja",
+    "highlights": [
+        "Clean Code & Arsitektur Scalable: Kodingan rapi dan gampang di-maintain oleh tim.",
+        "Performa Super Cepat & SEO: Web dioptimasi agar loading instan dan mudah ditemukan di Google.",
+        "Komunikasi Transparan: Tanpa istilah teknis yang ribet, fokus pada solusi bisnis.",
+        "End-to-End Delivery: Berpengalaman membangun dari skema database hingga deployment ke cloud."
+    ],
+    "techTitle": "Teknologi & Tools",
+    "ctaTitle": "Punya ide proyek atau butuh bantuan?",
+    "ctaSub": "Mari ngobrol santai untuk bahas kebutuhan teknis web kamu.",
+    "ctaBtn": "Hubungi Saya"
+}

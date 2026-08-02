@@ -1,6 +1,7 @@
 import "./../globals.css";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import { LanguageProvider } from "./providers/LanguageProvider";
 
 export default function RootLayout({
   children,
@@ -13,9 +14,11 @@ export default function RootLayout({
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <Navbar/>
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
