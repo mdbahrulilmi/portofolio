@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": "digital-product-marketplace",
+      "title": "Digital Product Marketplace",
+      "slug": "digital-product-marketplace",
+      "summary": "Platform penjualan produk digital dengan pembayaran online, dashboard admin, dan distribusi file otomatis.",
+      "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
+      "category": "Web App",
+      "techStack": [
+        "Laravel",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "AWS S3"
+      ],
+      "links": {
+        "github": "https://github.com/username/digital-product-marketplace",
+        "live": "https://example.com"
+      },
+      "documentation": "digital-product-marketplace.md",
+      "createdAt": "2026-08-03"
+    }
+  ]
+}
