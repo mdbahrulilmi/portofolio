@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Layers } from "lucide-react";
+import { Layers, Terminal } from "lucide-react";
 import showcase from "./content/showcase.json";
 import ShowcaseCard from "./components/ShowcaseCard";
 
@@ -27,11 +27,10 @@ export default function ShowcasePage() {
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border">
-            <Layers className="w-4 h-4" />
-            Showcase Portfolio
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 bg-zinc-50 text-xs font-medium text-zinc-600 mb-4">
+              <Terminal className="w-3.5 h-3.5 text-zinc-900" />
+              Showcase Portofolio
           </div>
-
           <h1 className="text-5xl font-bold mt-4">
             Kumpulan Proyek Pilihan.
           </h1>
