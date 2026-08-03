@@ -2,6 +2,7 @@ import "./../globals.css";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { LanguageProvider } from "./providers/LanguageProvider";
+import "highlight.js/styles/github.css";
 
 export default function RootLayout({
   children,
