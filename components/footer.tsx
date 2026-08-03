@@ -7,7 +7,7 @@ export default function Footer() {
         
         <div className="flex items-center gap-2">
           <span className="font-semibold text-zinc-900 tracking-tight">
-            Mdbahrulilmi<span className="text-zinc-400">.</span>
+            Mdbahrulilmi
           </span>
           <span className="text-zinc-400">© {new Date().getFullYear()} All rights reserved.</span>
         </div>

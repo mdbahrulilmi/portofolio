@@ -1,40 +1,28 @@
+"use client"
+
 import { Compass, Code2, ShieldCheck, Rocket } from "lucide-react";
+import { useLanguage } from "../../providers/LanguageProvider";
+import id from "./content/id.json";
+import en from "./content/en.json";
 
 export default function Workflow() {
-  const steps = [
-    {
-      number: "01",
-      icon: Compass,
-      title: "Perencanaan & Arsitektur",
-      description:
-        "Menganalisis kebutuhan bisnis, menentukan stack teknologi terkuat, serta merancang skema database dan Wireframe visual sebelum baris kode pertama ditulis.",
-      tags: ["System Design", "Database Schema", "UI/UX Flow"],
-    },
-    {
-      number: "02",
-      icon: Code2,
-      title: "Pengembangan Fullstack",
-      description:
-        "Membangun API handal di backend dan antarmuka responsif di frontend dengan kode yang bersih, scalable, serta terdokumentasi rapi.",
-      tags: ["Frontend & Backend", "RESTful API", "Clean Code"],
-    },
-    {
-      number: "03",
-      icon: ShieldCheck,
-      title: "Pengujian & Optimalisasi",
-      description:
-        "Memastikan aplikasi bebas bugs, menguji keamanan dari kerentanan, serta melakukan tuning performa agar loading secepat kilat.",
-      tags: ["Performance Tuning", "Security Check", "Cross-Browser"],
-    },
-    {
-      number: "04",
-      icon: Rocket,
-      title: "Peluncuran & Pemeliharaan",
-      description:
-        "Proses deployment ke cloud server, konfigurasi domain & SSL, hingga pemantauan aplikasi pasca-rilis agar tetap berjalan 24/7 tanpa kendala.",
-      tags: ["CI/CD Pipeline", "Cloud Hosting", "Maintenance"],
-    },
-  ];
+
+  const { lang } = useLanguage();
+
+  const content = {
+    id,
+    en
+  };
+
+  const icons = {
+    Compass,
+    Code2,
+    ShieldCheck,
+    Rocket,
+  };
+
+  const header = content[lang].header;
+  const steps = content[lang].steps;
 
   return (
     <section id="workflow" className="py-24 bg-white text-zinc-900 border-t border-zinc-200/80">
@@ -42,19 +30,19 @@ export default function Workflow() {
         
         <div className="max-w-2xl mb-16">
           <p className="text-xs font-semibold tracking-wider uppercase text-zinc-500 mb-3">
-            Workflow & Alur Kerja
+            { header.badge }
           </p>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
-            Dari Ide Konseptual Hingga Aplikasi Siap Pakai.
+            { header.title }
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
-            Setiap proyek dikerjakan dengan metodologi terstruktur untuk memastikan produk Anda tidak hanya cepat dirilis, tetapi juga stabil dan siap berkembang.
+            { header.description }
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           {steps.map((step) => {
-            const Icon = step.icon;
+            const Icon = icons[step.icon as keyof typeof icons];
             return (
               <div
                 key={step.number}

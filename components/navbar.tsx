@@ -24,7 +24,7 @@ export default function Navbar() {
              <li className="flex items-center gap-1 p-1 bg-zinc-100 rounded-full border border-zinc-200">
               <button
                 onClick={() => setLang("id")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all ${
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   lang === "id" ? "bg-white text-zinc-900 shadow-xs" : "text-zinc-500 hover:text-zinc-900"
                 }`}
               >
@@ -32,7 +32,7 @@ export default function Navbar() {
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all ${
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   lang === "en" ? "bg-white text-zinc-900 shadow-xs" : "text-zinc-500 hover:text-zinc-900"
                 }`}
               >

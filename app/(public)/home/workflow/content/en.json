@@ -1,0 +1,37 @@
+{
+  "header": {
+    "badge": "Workflow & Process",
+    "title": "From Conceptual Idea to Production-Ready Application.",
+    "description": "Every project is crafted using a structured methodology to ensure your product is not only launched quickly, but is also stable and ready to scale."
+  },
+  "steps": [
+    {
+      "number": "01",
+      "icon": "Compass",
+      "title": "Planning & Architecture",
+      "description": "Analyzing business needs, defining the optimal tech stack, and designing database schemas as well as visual wireframes before writing the first line of code.",
+      "tags": ["System Design", "Database Schema", "UI/UX Flow"]
+    },
+    {
+      "number": "02",
+      "icon": "Code2",
+      "title": "Fullstack Development",
+      "description": "Building robust backend APIs and responsive frontend interfaces using clean, scalable, and well-documented code.",
+      "tags": ["Frontend & Backend", "RESTful API", "Clean Code"]
+    },
+    {
+      "number": "03",
+      "icon": "ShieldCheck",
+      "title": "Testing & Optimization",
+      "description": "Ensuring the application is bug-free, auditing for security vulnerabilities, and tuning performance for lightning-fast loading speeds.",
+      "tags": ["Performance Tuning", "Security Check", "Cross-Browser"]
+    },
+    {
+      "number": "04",
+      "icon": "Rocket",
+      "title": "Deployment & Maintenance",
+      "description": "Deploying to cloud servers, configuring domain & SSL, and monitoring the application post-release to ensure seamless 24/7 operation.",
+      "tags": ["CI/CD Pipeline", "Cloud Hosting", "Maintenance"]
+    }
+  ]
+}

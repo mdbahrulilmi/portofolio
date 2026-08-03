@@ -1,0 +1,37 @@
+{
+  "header": {
+    "badge": "Workflow & Alur Kerja",
+    "title": "Dari Ide Konseptual Hingga Aplikasi Siap Pakai.",
+    "description": "Setiap proyek dikerjakan dengan metodologi terstruktur untuk memastikan produk Anda tidak hanya cepat dirilis, tetapi juga stabil dan siap berkembang."
+  },
+  "steps": [
+    {
+      "number": "01",
+      "icon": "Compass",
+      "title": "Perencanaan & Arsitektur",
+      "description": "Menganalisis kebutuhan bisnis, menentukan stack teknologi terkuat, serta merancang skema database dan wireframe visual sebelum baris kode pertama ditulis.",
+      "tags": ["System Design", "Database Schema", "UI/UX Flow"]
+    },
+    {
+      "number": "02",
+      "icon": "Code2",
+      "title": "Pengembangan Fullstack",
+      "description": "Membangun API andal di backend dan antarmuka responsif di frontend dengan kode yang bersih, scalable, serta terdokumentasi rapi.",
+      "tags": ["Frontend & Backend", "RESTful API", "Clean Code"]
+    },
+    {
+      "number": "03",
+      "icon": "ShieldCheck",
+      "title": "Pengujian & Optimalisasi",
+      "description": "Memastikan aplikasi bebas bug, menguji keamanan dari kerentanan, serta melakukan tuning performa agar loading secepat kilat.",
+      "tags": ["Performance Tuning", "Security Check", "Cross-Browser"]
+    },
+    {
+      "number": "04",
+      "icon": "Rocket",
+      "title": "Peluncuran & Pemeliharaan",
+      "description": "Proses deployment ke cloud server, konfigurasi domain & SSL, hingga pemantauan aplikasi pasca-rilis agar tetap berjalan 24/7 tanpa kendala.",
+      "tags": ["CI/CD Pipeline", "Cloud Hosting", "Maintenance"]
+    }
+  ]
+}
