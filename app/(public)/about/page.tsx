@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Terminal, Cpu, Sparkles, CheckCircle2 } from "lucide-react";
+import { Terminal, Cpu, Sparkles, CheckCircle2 } from "lucide-react";
 import id from "./content/id.json"
 import en from "./content/en.json"
 import { useLanguage } from "../providers/LanguageProvider";
 
 export default function AboutPage() {
 
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
 
   const content = {
     id, 
@@ -28,16 +28,6 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white font-sans text-zinc-900 flex flex-col justify-between">
       <main className="py-6 sm:py-10 bg-white text-zinc-900 flex-1">
         <div className="max-w-5xl mx-auto px-6">
-          
-          <div className="flex items-center justify-between mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors group"
-            >
-              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-              {t.back}
-            </Link>
-          </div>
 
           <div className="mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 bg-zinc-50 text-xs font-medium text-zinc-600 mb-4">
