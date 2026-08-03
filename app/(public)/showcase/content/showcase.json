@@ -1,23 +1,37 @@
 {
   "projects": [
     {
-      "id": "digital-product-marketplace",
-      "title": "Digital Product Marketplace",
-      "slug": "digital-product-marketplace",
-      "summary": "Platform penjualan produk digital dengan pembayaran online, dashboard admin, dan distribusi file otomatis.",
+      "id": "digital-app",
+      "title": "Digital App",
+      "slug": "digital-app",
+      "summary": "Platform penjualan produk digital dengan pembayaran online, dashboard admin, dan member area.",
       "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
       "category": "Web App",
       "techStack": [
         "Laravel",
-        "Next.js",
-        "TypeScript",
+        "Livewire",
+        "Alpine.js",
         "Tailwind CSS",
-        "PostgreSQL",
-        "AWS S3"
+        "Mysql",
+        "AWS S3",
+        "DOKU Payment Gateway"
       ],
       "links": {
-        "github": "https://github.com/username/digital-product-marketplace",
-        "live": "https://example.com"
+        "github": null,
+        "live": [
+          {
+            "name": "Digital Sukawebsite",
+            "url":  "https://digital.sukawebsite.com"
+          },
+          {
+            "name": "Romy Rafael",
+            "url":  "https://romyrafael.id"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
       },
       "documentation": "digital-product-marketplace.md",
       "createdAt": "2026-08-03"

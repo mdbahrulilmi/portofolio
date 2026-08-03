@@ -25,9 +25,7 @@ export default async function ProjectPage({
   }
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12">
-
-      {/* Back Button */}
+    <main className="max-w-6xl mx-auto px-6 py-6">
       <Link
         href="/showcase"
         className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors mb-8"
@@ -35,8 +33,6 @@ export default async function ProjectPage({
         <ArrowLeft className="w-4 h-4" />
         Back to Showcase
       </Link>
-
-      {/* Header */}
       <header className="border-b border-zinc-200 pb-8 mb-10">
 
         <span className="inline-flex px-3 py-1 rounded-full bg-zinc-100 text-xs font-medium text-zinc-600 mb-4">
@@ -50,8 +46,6 @@ export default async function ProjectPage({
         <p className="mt-4 text-lg text-zinc-600 leading-relaxed">
           {project.summary}
         </p>
-
-        {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mt-6">
           {project.techStack.map((tech: string) => (
             <span
@@ -62,10 +56,8 @@ export default async function ProjectPage({
             </span>
           ))}
         </div>
-
-        {/* External Links */}
-        <div className="flex gap-3 mt-8">
-          {project.links.github && (
+        <div className="mt-8 space-y-3">
+          {project.links.github ? (
             <a
               href={project.links.github}
               target="_blank"
@@ -74,23 +66,38 @@ export default async function ProjectPage({
             >
               GitHub
             </a>
+          ) : (
+            <div className="px-4 py-2 rounded-lg border border-amber-200 bg-amber-50 text-amber-700 text-sm inline-block">
+              🔒 Repository private milik perusahaan
+            </div>
           )}
 
-          {project.links.live && (
-            <a
-              href={project.links.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition"
-            >
-              Live Demo
-            </a>
+          {project.links.live?.length > 0 && (
+            <>
+              <p className="text-sm text-zinc-500">
+                Available environments:
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {project.links.live.map((demo: any) => (
+                  <a
+                    key={demo.url}
+                    href={demo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition"
+                  >
+                    {demo.name}
+                  </a>
+                ))}
+              </div>
+            </>
           )}
+
         </div>
 
       </header>
-
-      {/* Markdown */}
+      
       <article className="prose prose-zinc max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}

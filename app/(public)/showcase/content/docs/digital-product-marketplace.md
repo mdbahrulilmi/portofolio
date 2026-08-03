@@ -2,9 +2,9 @@
 
 ## Tentang Project
 
-Digital Product Marketplace adalah platform untuk menjual produk digital seperti source code, template, maupun e-book.
+Digital App adalah platform untuk menjual produk digital dan juga untuk berjualan kelas.
 
-Project ini dibangun menggunakan Laravel sebagai backend dan Next.js sebagai frontend.
+Project ini dibangun menggunakan Laravel sebagai backend dan Livewire sebagai frontend. dan Doku sebagai payment gateway dan NexaS3 sebagai object storage berbasis aws s3
 
 ---
 
