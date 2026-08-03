@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
 import { Terminal, Cpu, Sparkles, CheckCircle2 } from "lucide-react";
 import id from "./content/id.json"
 import en from "./content/en.json"
@@ -27,9 +25,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-zinc-900 flex flex-col justify-between">
       <main className="py-6 sm:py-10 bg-white text-zinc-900 flex-1">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <div className="mb-16">
+          <div className="mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 bg-zinc-50 text-xs font-medium text-zinc-600 mb-4">
               <Terminal className="w-3.5 h-3.5 text-zinc-900" />
               {t.badge}
