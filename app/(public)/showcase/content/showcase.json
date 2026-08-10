@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-      "id": "digital-app",
-      "title": "Digital App",
-      "slug": "digital-app",
-      "summary": "Platform penjualan produk digital dengan pembayaran online, dashboard admin, dan member area.",
-      "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
-      "category": "Web App",
+    "id": "digital-app",
+    "title": "Digital App",
+    "slug": "digital-app",
+    "summary": "Platform penjualan produk digital dan LMS dengan pembayaran otomatis, dashboard admin, dan member area interaktif.",
+    "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
+    "category": "Web",
       "techStack": [
         "Laravel",
         "Livewire",
@@ -33,7 +33,239 @@
         "visibility": "private",
         "owner": "Company"
       },
-      "documentation": "digital-product-marketplace.md",
+      "documentation": "digital_app.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "desago-digital",
+      "title": "Desago Digital",
+      "slug": "desago-digital",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Mobile",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "hasanahtours",
+      "title": "Hasanahtours",
+      "slug": "hasanahtours",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Web & Mobile",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "elearning-mysch",
+      "title": "Elearning Mysch",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Web",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "bot-whatsapp",
+      "title": "Bot Whatsapp (Whatsmeow Library)",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Bot Automation",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ndeleng",
+      "title": "Ndeleng (discover movies with api TMdb)",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Web",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "stunting-prediction",
+      "title": "Stunting Prediction",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Web",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "rasapublik",
+      "title": "Rasa Publik",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Web",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "nusantara-recipe",
+      "title": "Nusantara Recipe",
+      "slug": "elearning-mysch",
+      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
+      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "category": "Mobile",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Firebase",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+          }
+        ]
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "desago_digital.md",
       "createdAt": "2026-08-03"
     }
   ]

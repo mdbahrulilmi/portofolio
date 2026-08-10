@@ -96,18 +96,49 @@ Dukungan Format: MP3, MP4, Gambar, PDF, Google Drive, YouTube, dll.
 
 ---
 
-## Tantangan
+## Tantangan & Solusi
 
-Salah satu tantangan adalah proses upload file digital berukuran besar. Awalnya file diunggah ke server aplikasi sehingga berpotensi membebani storage dan bandwidth server.
+1. **Efisiensi Server & Upload File Berukuran Besar**
+   * **Tantangan:** Awalnya, pengunggahan aset digital dilakukan langsung ke server aplikasi. Hal ini berpotensi membebani kapasitas *storage*, menghabiskan *bandwidth* server, dan berisiko *timeout* pada koneksi lambat.
+   * **Solusi:** Mengimplementasikan **AWS S3 Presigned URL**. *Browser* pengguna kini mengunggah file langsung ke *bucket* S3 tanpa melalui server backend, sehingga menghemat *resource* server dan mempercepat proses *upload*.
 
-## Solusi
+2. **Interaktivitas UI & Perubahan Status Real-Time**
+   * **Tantangan:** Karena dibangun di atas Laravel yang berbasis *server-rendered*, proses pembaruan status transaksi *payment gateway* serta interaksi member (seperti melacak *progress* harian dan submit jurnal per materi) akan terasa lambat dan kaku jika harus melakukan *full page reload*.
+   * **Solusi:** Menggunakan **Laravel Livewire** untuk mengelola *state* UI secara reaktif tanpa *reload* halaman, memberikan pengalaman pengguna (*user experience*) yang mulus layaknya aplikasi SPA (*Single Page Application*).
 
-Menggunakan AWS S3 Presigned URL sehingga browser pengguna dapat mengunggah file langsung ke S3 tanpa melewati server aplikasi.
-
----
+3. **Fleksibilitas Konten & Formatting Teks**
+   * **Tantangan:** Klien membutuhkan *text editor* yang fleksibel untuk menyusun materi pembelajaran dan deskripsi produk, seperti kemampuan memformat teks (misalnya *bolding* khusus) sesuai keinginan tanpa merusak tampilan responsif.
+   * **Solusi:** Mengintegrasikan **Tiptap Editor** yang terhubung langsung dengan Livewire untuk menghasilkan output HTML yang bersih, aman, dan mudah disesuaikan oleh klien.
 
 ## Screenshot
 
+**Tampilan Dashboard**
 ![Image](https://github.com/user-attachments/assets/3bd8fe80-e42f-4f08-8c13-25e0bea35457)
 
-![Product](./digital_app/product.webp)
+**Tampilan Setting SEO**
+
+![Image](https://github.com/user-attachments/assets/e738caaa-6117-4fcf-bf31-20830326f008)
+
+**Tampilan CMS**
+
+![Image](https://github.com/user-attachments/assets/15a15ae6-de72-4d1d-b393-4e81475bd7f8)
+
+**Tampilan Management Program**
+
+![Image](https://github.com/user-attachments/assets/8cda22a0-614f-469e-aeed-2abbab14f41e)
+
+**Tampilan Dashboard Member**
+
+![Image](https://github.com/user-attachments/assets/677a859d-0c9b-432b-9b0f-d2090ea166c3)
+
+**Tampilan Dashboard Program Member**
+
+![Image](https://github.com/user-attachments/assets/6d41b0ed-fd53-4a3b-b579-152b34a49323)
+
+**Tampilan Riwayat Jurnal**
+
+![Image](https://github.com/user-attachments/assets/f2951edd-16b1-4d72-b032-4bd360a8304c)
+
+**Tampilan Webinar**
+
+![Image](https://github.com/user-attachments/assets/90622002-8521-43e8-9bd8-dc85923b950e)
