@@ -14,7 +14,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/mdbahrulilmi"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 hover:text-zinc-900 transition-colors"
@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/mdbahrulilmi"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 hover:text-zinc-900 transition-colors"
@@ -37,7 +37,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a
+          {/* <a
             href="https://x.com"
             target="_blank"
             rel="noreferrer"
@@ -47,10 +47,12 @@ export default function Footer() {
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
-          </a>
+          </a> */}
 
-          <a
-            href="mailto:email@domain.com"
+         <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mdbahrulilmi@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-zinc-500 hover:text-zinc-900 transition-colors"
             aria-label="Email"
           >
