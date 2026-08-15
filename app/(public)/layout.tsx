@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     siteName: "Muhammad Bahrul Ilmi",
     images: [
       {
-        url: `${SITE_URL}/og`,
+        url: `${SITE_URL}/mdbahrulilmi.png`,
         width: 1200,
         height: 630,
         alt: "Muhammad Bahrul Ilmi Portfolio Preview",
