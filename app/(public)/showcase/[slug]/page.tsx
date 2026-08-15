@@ -25,80 +25,83 @@ export default async function ProjectPage({
   }
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-6">
+    <main className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+      {/* Back Link */}
       <Link
         href="/showcase"
-        className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:opacity-80 transition-all mb-8"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Showcase
       </Link>
-      <header className="border-b border-zinc-200 pb-8 mb-10">
 
-        <span className="inline-flex px-3 py-1 rounded-full bg-zinc-100 text-xs font-medium text-zinc-600 mb-4">
+      <header className="border-b border-blue-100 dark:border-blue-950 pb-8 mb-10">
+
+        {/* Category Badge */}
+        <span className="inline-flex px-3.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 mb-4 shadow-xs">
           {project.category}
         </span>
 
-        <h1 className="text-5xl font-bold tracking-tight">
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-blue-950 dark:text-white">
           {project.title}
         </h1>
 
-        <p className="mt-4 text-lg text-zinc-600 leading-relaxed">
+        {/* Summary */}
+        <p className="mt-4 text-base md:text-lg text-blue-950/80 dark:text-blue-200/80 leading-relaxed max-w-3xl">
           {project.summary}
         </p>
+
+        {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mt-6">
-          {project.techStack.map((tech: string) => (
+          {project.techStack?.map((tech: string) => (
             <span
               key={tech}
-              className="px-3 py-1 rounded-md bg-zinc-100 border border-zinc-200 text-sm"
+              className="px-3 py-1 rounded-md bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 text-xs font-semibold text-blue-900 dark:text-blue-200 shadow-xs"
             >
               {tech}
             </span>
           ))}
         </div>
-        <div className="mt-8 space-y-3">
-          {project.links.github ? (
+
+        {/* Links & Repository Status */}
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          {project.links?.github ? (
             <a
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
+              className="px-4 py-2 rounded-xl border border-blue-200 dark:border-blue-800 bg-white dark:bg-blue-950 text-blue-900 dark:text-blue-200 text-xs font-semibold hover:border-blue-500 transition shadow-xs"
             >
-              GitHub
+              GitHub Repository
             </a>
           ) : (
-            <div className="px-4 py-2 rounded-lg border border-amber-200 bg-amber-50 text-amber-700 text-sm inline-block">
+            <div className="px-4 py-2 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-xs font-semibold inline-block">
               🔒 Repository private milik perusahaan
             </div>
           )}
 
-          {project.links.live?.length > 0 && (
-            <>
-              <p className="text-sm text-zinc-500">
-                Available environments:
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-                {project.links.live.map((demo: any) => (
-                  <a
-                    key={demo.url}
-                    href={demo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition"
-                  >
-                    {demo.name}
-                  </a>
-                ))}
-              </div>
-            </>
+          {project.links?.live?.length > 0 && (
+            <div className="flex flex-wrap items-center gap-3">
+              {project.links.live.map((demo: any) => (
+                <a
+                  key={demo.url}
+                  href={demo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-blue-600 text-white dark:bg-blue-500 dark:text-blue-950 text-xs font-semibold hover:bg-blue-500 dark:hover:bg-blue-400 transition shadow-xs"
+                >
+                  {demo.name}
+                </a>
+              ))}
+            </div>
           )}
-
         </div>
 
       </header>
       
-      <article className="prose prose-zinc max-w-none">
+      {/* Markdown Documentation Content */}
+      <article className="prose prose-blue max-w-none dark:prose-invert">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight]}

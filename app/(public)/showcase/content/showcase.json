@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-    "id": "digital-app",
-    "title": "Digital App",
-    "slug": "digital-app",
-    "summary": "Platform penjualan produk digital dan LMS dengan pembayaran otomatis, dashboard admin, dan member area interaktif.",
-    "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
-    "category": "Web",
+      "id": "digital-app",
+      "title": "Digital App",
+      "slug": "digital-app",
+      "summary": "Platform penjualan produk digital dan LMS dengan pembayaran otomatis, dashboard admin, dan member area interaktif.",
+      "thumbnail": "/showcase/digital-product-marketplace/cover.webp",
+      "category": "Web",
       "techStack": [
         "Laravel",
         "Livewire",
@@ -21,11 +21,11 @@
         "live": [
           {
             "name": "Digital Sukawebsite",
-            "url":  "https://digital.sukawebsite.com"
+            "url": "https://digital.sukawebsite.com"
           },
           {
             "name": "Romy Rafael",
-            "url":  "https://romyrafael.id"
+            "url": "https://romyrafael.id"
           }
         ]
       },
@@ -69,21 +69,22 @@
       "id": "hasanahtours",
       "title": "Hasanahtours",
       "slug": "hasanahtours",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
-      "category": "Web & Mobile",
+      "summary": "Platform web travel dan umroh modern dengan sistem manajemen pemesanan terintegrasi serta fitur asisten AI untuk jamaah.",
+      "thumbnail": "/showcase/hasanahtours/cover.webp",
+      "category": "Web",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
+        "PHP",
+        "React.js",
+        "Tailwind CSS",
+        "Cekat AI",
         "MySQL"
       ],
       "links": {
         "github": null,
         "live": [
           {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
+            "name": "Website",
+            "url": "https://hasanahtours.com"
           }
         ]
       },
@@ -91,181 +92,170 @@
         "visibility": "private",
         "owner": "Company"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "hasanahtours.md",
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "hajj",
+      "title": "Hajj",
+      "slug": "hajj",
+      "summary": "Aplikasi mobile panduan ibadah haji & umroh lengkap dengan pelacakan jadwal manasik dan notifikasi pengingat berbasis WhatsApp.",
+      "thumbnail": "/showcase/hajj/cover.webp",
+      "category": "Mobile",
+      "techStack": [
+        "Flutter",
+        "Laravel",
+        "Watzap API",
+        "MySQL"
+      ],
+      "links": {
+        "github": null,
+        "live": []
+      },
+      "repository": {
+        "visibility": "private",
+        "owner": "Company"
+      },
+      "documentation": "hajj.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "elearning-mysch",
       "title": "Elearning Mysch",
       "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "summary": "Sistem manajemen pembelajaran (LMS) sekolah berbasis web untuk pengelolaan kelas digital, materi, dan ujian online.",
+      "thumbnail": "/showcase/elearning-mysch/cover.webp",
       "category": "Web",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
+        "PHP",
+        "Python",
         "MySQL"
       ],
       "links": {
         "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "live": []
       },
       "repository": {
         "visibility": "private",
         "owner": "Company"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "elearning_mysch.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "bot-whatsapp",
       "title": "Bot Whatsapp (Whatsmeow Library)",
-      "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
-      "category": "Bot Automation",
+      "slug": "bot-whatsapp",
+      "summary": "Layanan otomatisasi pesan WhatsApp berperforma tinggi menggunakan library Whatsmeow Go dan integrasi kecerdasan buatan Gemini API.",
+      "thumbnail": "/showcase/whatsapp-bot/cover.webp",
+      "category": "Bot",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
-        "MySQL"
+        "Go",
+        "Whatsmeow Library",
+        "Gemini API",
+        "SQLite"
       ],
       "links": {
-        "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "github": "https://github.com/mdbahrulilmi",
+        "live": []
       },
       "repository": {
         "visibility": "private",
         "owner": "Company"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "whatsapp_bot.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "ndeleng",
-      "title": "Ndeleng (discover movies with api TMdb)",
-      "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "title": "Ndeleng",
+      "slug": "ndeleng",
+      "summary": "Aplikasi web penjelajah film interaktif untuk mencari informasi film, rating, rekomendasi, dan trailer populer menggunakan TMDb API.",
+      "thumbnail": "/showcase/ndeleng/cover.webp",
       "category": "Web",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
-        "MySQL"
+        "Next.js",
+        "TMdb API"
       ],
       "links": {
-        "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "github": "https://github.com/mdbahrulilmi/ndeleng",
+        "live": []
       },
       "repository": {
-        "visibility": "private",
-        "owner": "Company"
+        "visibility": "public",
+        "owner": "Personal"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "ndeleng.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "stunting-prediction",
       "title": "Stunting Prediction",
-      "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "slug": "stunting-prediction",
+      "summary": "Sistem prediktif kesehatan anak untuk deteksi dini risiko stunting menggunakan algoritma Machine Learning K-Nearest Neighbor (KNN).",
+      "thumbnail": "/showcase/stunting/cover.webp",
       "category": "Web",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
+        "Python",
+        "Flask",
+        "KNN Algorithm",
         "MySQL"
       ],
       "links": {
-        "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "github": "https://github.com/mdbahrulilmi",
+        "live": []
       },
       "repository": {
         "visibility": "private",
-        "owner": "Company"
+        "owner": "Personal"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "stunting_prediction.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "rasapublik",
       "title": "Rasa Publik",
-      "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "slug": "rasapublik",
+      "summary": "Dashboard analisis sentimen ulasan publik menggunakan pendekatan Natural Language Processing (NLP) dengan algoritma SVM dan Naive Bayes.",
+      "thumbnail": "/showcase/rasapublik/cover.webp",
       "category": "Web",
       "techStack": [
-        "Flutter",
-        "Laravel",
-        "Firebase",
-        "MySQL"
+        "Python",
+        "Streamlit",
+        "SVM Algorithm",
+        "Naive Bayes Algorithm"
       ],
       "links": {
-        "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "github": "https://github.com/mdbahrulilmi",
+        "live": []
       },
       "repository": {
         "visibility": "private",
-        "owner": "Company"
+        "owner": "Personal"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "rasapublik.md",
       "createdAt": "2026-08-03"
     },
     {
       "id": "nusantara-recipe",
       "title": "Nusantara Recipe",
-      "slug": "elearning-mysch",
-      "summary": "Platform layanan digital desa untuk pengajuan surat, pelaporan warga, transparansi dana desa, direktori UMKM, serta berita & agenda desa.",
-      "thumbnail": "/showcase/desago-digital/cover.webp",
+      "slug": "nusantara-recipe",
+      "summary": "Aplikasi mobile direktori resep kuliner tradisional Nusantara dengan fitur favorit dan penyimpanan cloud real-time.",
+      "thumbnail": "/showcase/nusantara-recipe/cover.webp",
       "category": "Mobile",
       "techStack": [
         "Flutter",
-        "Laravel",
-        "Firebase",
-        "MySQL"
+        "Appwrite"
       ],
       "links": {
-        "github": null,
-        "live": [
-          {
-            "name": "Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.desago.digital&pcampaignid=web_share"
-          }
-        ]
+        "github": "https://github.com/mdbahrulilmi",
+        "live": []
       },
       "repository": {
         "visibility": "private",
-        "owner": "Company"
+        "owner": "Personal"
       },
-      "documentation": "desago_digital.md",
+      "documentation": "nusantara_recipe.md",
       "createdAt": "2026-08-03"
     }
   ]

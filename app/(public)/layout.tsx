@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "Muhammad Bahrul Ilmi | Fullstack & Backend Developer",
+    title: "Muhammad Bahrul Ilmi | Fullstack Developer",
     description:
-      "Personal website & portfolio of Muhammad Bahrul Ilmi, Fullstack and Backend Engineer.",
+      "Personal website & portfolio of Muhammad Bahrul Ilmi, Fullstack Developer.",
     siteName: "Muhammad Bahrul Ilmi",
     images: [
       {
