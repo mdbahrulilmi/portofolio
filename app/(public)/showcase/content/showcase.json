@@ -166,7 +166,7 @@
         "SQLite"
       ],
       "links": {
-        "github": "https://github.com/mdbahrulilmi",
+        "github": null,
         "live": []
       },
       "repository": {
@@ -189,7 +189,12 @@
       ],
       "links": {
         "github": "https://github.com/mdbahrulilmi/ndeleng",
-        "live": []
+        "live": [
+          {
+            "name": "Ndeleng",
+            "url": "https://ndeleng.vercel.app"
+          }
+        ]
       },
       "repository": {
         "visibility": "public",
@@ -212,7 +217,7 @@
         "MySQL"
       ],
       "links": {
-        "github": "https://github.com/mdbahrulilmi",
+        "github": "https://github.com/mdbahrulilmi/stunting-prediction-flask",
         "live": []
       },
       "repository": {
@@ -236,7 +241,7 @@
         "Naive Bayes Algorithm"
       ],
       "links": {
-        "github": "https://github.com/mdbahrulilmi",
+        "github": "https://github.com/mdbahrulilmi/rasapublik",
         "live": []
       },
       "repository": {
