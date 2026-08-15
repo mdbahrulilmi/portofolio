@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw"; // <-- 1. Tambahkan import ini
 
 import { getProject } from "@/lib/showcase";
 
@@ -104,7 +105,7 @@ export default async function ProjectPage({
       <article className="prose prose-blue max-w-none dark:prose-invert">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeHighlight]}
+          rehypePlugins={[rehypeHighlight, rehypeRaw]} // <-- 2. Masukkan rehypeRaw ke sini
         >
           {project.markdown}
         </ReactMarkdown>
