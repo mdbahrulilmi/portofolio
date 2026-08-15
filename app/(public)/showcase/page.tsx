@@ -23,17 +23,17 @@ export default function ShowcasePage() {
         );
 
   return (
-    <main className="relative min-h-screen py-12 overflow-hidden">
+    <main className="relative min-h-screen py-12 sm:py-16 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-blue-500/10 dark:bg-blue-500/5 blur-[140px] pointer-events-none rounded-full" />
       <div className="relative max-w-6xl mx-auto px-6">
 
         <div className="mb-12 md:mb-16">
           
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight text-zinc-900 dark:text-white">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6">
             Kumpulan Proyek Pilihan<span className="text-blue-500">.</span>
           </h1>
           
-          <p className="text-zinc-600 dark:text-zinc-400 mt-4 text-base md:text-lg max-w-2xl leading-relaxed">
+          <p className="text-lg sm:text-xl text-blue-950/80 dark:text-blue-200/80 leading-relaxed font-normal max-w-3xl">
             Eksplorasi mendalam mengenai hasil karya rekayasa perangkat lunak, sistem backend berperforma tinggi, dan aplikasi web modern.
           </p>
         </div>

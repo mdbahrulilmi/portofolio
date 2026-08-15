@@ -26,8 +26,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans text-blue-950 dark:text-white flex flex-col justify-between transition-colors">
       <main className="py-12 sm:py-16 flex-1">
         <div className="max-w-6xl mx-auto px-6">
-
-          {/* Header Section */}
+          
           <div className="mb-12 md:mb-16">
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6">
               {t.heading}<span className="text-blue-500">.</span>

@@ -113,32 +113,25 @@ Dukungan Format: MP3, MP4, Gambar, PDF, Google Drive, YouTube, dll.
 ## Screenshot
 
 **Tampilan Dashboard**
-![Image](https://github.com/user-attachments/assets/3bd8fe80-e42f-4f08-8c13-25e0bea35457)
+![Tampilan Dashboard](/digital-app/admin-dashboard.PNG)
 
 **Tampilan Setting SEO**
-
-![Image](https://github.com/user-attachments/assets/e738caaa-6117-4fcf-bf31-20830326f008)
+![Tampilan Setting SEO](/digital-app/admin-seo.PNG)
 
 **Tampilan CMS**
-
-![Image](https://github.com/user-attachments/assets/15a15ae6-de72-4d1d-b393-4e81475bd7f8)
+![Tampilan CMS](/digital-app/admin-cms.PNG)
 
 **Tampilan Management Program**
-
-![Image](https://github.com/user-attachments/assets/8cda22a0-614f-469e-aeed-2abbab14f41e)
+![Tampilan Management Program](/digital-app/admin-program.PNG)
 
 **Tampilan Dashboard Member**
-
-![Image](https://github.com/user-attachments/assets/677a859d-0c9b-432b-9b0f-d2090ea166c3)
+![Tampilan Dashboard Member](/digital-app/member-dashboard.PNG)
 
 **Tampilan Dashboard Program Member**
-
-![Image](https://github.com/user-attachments/assets/6d41b0ed-fd53-4a3b-b579-152b34a49323)
+![Tampilan Dashboard Program Member](/digital-app/member-program-dashboard.PNG)
 
 **Tampilan Riwayat Jurnal**
-
-![Image](https://github.com/user-attachments/assets/f2951edd-16b1-4d72-b032-4bd360a8304c)
+![Tampilan Riwayat Jurnal](/digital-app/member-program-jurnal.PNG)
 
 **Tampilan Webinar**
-
-![Image](https://github.com/user-attachments/assets/90622002-8521-43e8-9bd8-dc85923b950e)
+![Tampilan Webinar](/digital-app/member-program-webinar.PNG)
