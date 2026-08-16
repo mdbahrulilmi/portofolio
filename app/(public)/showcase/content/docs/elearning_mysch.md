@@ -48,13 +48,11 @@ Dalam proyek ini, saya bertanggung jawab untuk mengembangkan dan menghubungkan m
 
 ## 📸 Tampilan Antarmuka
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-  <div>
-    <strong>Dashboard Materi E-Course</strong>
-    <img src="/mysch/dashboard-materi.webp" alt="Dashboard Materi" />
-  </div>
-  <div>
-    <strong>Sistem Ujian dengan Face Recognition</strong>
-    <img src="/mysch/face-recognition.webp" alt="Face Recognition Exam" />
-  </div>
-</div>
+**Tampilan Dashboard Materi**
+![Tampilan Materi](/elearning-mysch/dashboard-materi.webp)
+
+**Tampilan Deteksi Wajah**
+![Tampilan Materi](/elearning-mysch/face-recognition.webp)
+
+**Tampilan Materi**
+![Tampilan Materi](/elearning-mysch/materi.webp)

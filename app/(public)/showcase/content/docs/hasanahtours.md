@@ -54,7 +54,7 @@ Fokus utama saya adalah modernisasi dan penyesuaian fungsionalitas sistem agar l
 ## Screenshot
 
 **Tampilan Website**
-![Tampilan Website](/hasanahtours/hasanahtours.PNG)
+![Tampilan Website](/hasanahtours/hasanahtours.webp)
 
 **Tampilan Dashboard Hasanahtours x GHG**
-![Tampilan Dashboard Hasanahtours x GHG](/hasanahtours/program-hasanahtours.PNG)
+![Tampilan Dashboard Hasanahtours x GHG](/hasanahtours/program-hasanahtours.webp)

@@ -53,7 +53,7 @@ Dalam proyek ini, saya bertanggung jawab penuh sebagai **Fullstack Developer** u
 ## 📱 Tangkapan Layar
 
 **Tampilan Dashboard**
-![Tampilan Dashboard Admin](/hajj/admin.PNG)
+![Tampilan Dashboard Admin](/hajj/admin.webp)
 
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
