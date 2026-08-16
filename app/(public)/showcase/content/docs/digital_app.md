@@ -113,25 +113,25 @@ Dukungan Format: MP3, MP4, Gambar, PDF, Google Drive, YouTube, dll.
 ## Screenshot
 
 **Tampilan Dashboard**
-![Tampilan Dashboard](/digital-app/admin-dashboard.png)
+![Tampilan Dashboard](/digital-app/admin-dashboard.webp)
 
 **Tampilan Setting SEO**
-![Tampilan Setting SEO](/digital-app/admin-seo.png)
+![Tampilan Setting SEO](/digital-app/admin-seo.webp)
 
 **Tampilan CMS**
-![Tampilan CMS](/digital-app/admin-cms.png)
+![Tampilan CMS](/digital-app/admin-cms.webp)
 
 **Tampilan Management Program**
-![Tampilan Management Program](/digital-app/admin-program.png)
+![Tampilan Management Program](/digital-app/admin-program.webp)
 
 **Tampilan Dashboard Member**
-![Tampilan Dashboard Member](/digital-app/member-dashboard.png)
+![Tampilan Dashboard Member](/digital-app/member-dashboard.webp)
 
 **Tampilan Dashboard Program Member**
-![Tampilan Dashboard Program Member](/digital-app/member-program-dashboard.png)
+![Tampilan Dashboard Program Member](/digital-app/member-program-dashboard.webp)
 
 **Tampilan Riwayat Jurnal**
-![Tampilan Riwayat Jurnal](/digital-app/member-program-jurnal.png)
+![Tampilan Riwayat Jurnal](/digital-app/member-program-jurnal.webp)
 
 **Tampilan Webinar**
-![Tampilan Webinar](/digital-app/member-program-webinar.png)
+![Tampilan Webinar](/digital-app/member-program-webinar.webp)
