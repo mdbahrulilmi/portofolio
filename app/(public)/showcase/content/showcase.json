@@ -100,7 +100,7 @@
       "id": "hajj",
       "title": "Hajj",
       "slug": "hajj",
-      "summary": "Aplikasi mobile panduan ibadah haji & umroh lengkap dengan pelacakan jadwal manasik dan notifikasi pengingat berbasis WhatsApp.",
+      "summary": "Platform berbasis mobile yang dirancang khusus untuk para mitra (agen/travel) dalam mengelola penjualan paket Umroh dan Haji secara efisien. Proyek ini berfokus pada penyediaan ekosistem bagi mitra untuk memantau performa penjualan, manajemen jamaah, serta pengelolaan bagi hasil secara transparan.",
       "thumbnail": "/showcase/hajj/cover.webp",
       "category": "Mobile",
       "techStack": [
