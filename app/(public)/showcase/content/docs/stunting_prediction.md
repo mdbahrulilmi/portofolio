@@ -1,69 +1,45 @@
-# Stunting Monitor App - Child Growth & Prediction System
+# 📊 Stunting Monitor App: Child Growth & Prediction System
 
-**Stunting Monitor App** adalah aplikasi berbasis web yang dirancang untuk memantau pertumbuhan anak dan memprediksi status stunting menggunakan algoritma *Machine Learning* **K-Nearest Neighbors (KNN)**. Sistem ini dikembangkan untuk membantu tenaga kesehatan (kader posyandu/puskesmas) dan orang tua dalam mendeteksi secara dini risiko stunting berdasarkan data antropometri anak, yang juga terintegrasi langsung dengan pendataan berbasis wilayah di tingkat **kelurahan**.
+**Stunting Monitor App** adalah aplikasi berbasis web yang dirancang untuk memantau pertumbuhan anak dan memprediksi status stunting menggunakan algoritma *Machine Learning* **K-Nearest Neighbors (KNN)**. Sistem ini dikembangkan untuk membantu tenaga kesehatan (kader posyandu/puskesmas) dan orang tua dalam mendeteksi secara dini risiko stunting berdasarkan data antropometri anak yang dikumpulkan secara rutin setiap bulan.
 
 ---
 
-## 🛠️ Peran & Tanggung Jawab
+## 🛠️ Peran & Tanggung Jawab (Fokus Posyandu Bulanan)
 
-Dalam proyek ini, saya bertanggung jawab penuh atas pengembangan sistem secara menyeluruh dari sisi *backend*, integrasi model *machine learning*, hingga pengelolaan basis data wilayah:
-
-*   **Machine Learning Integration:** Menerapkan algoritma **K-Nearest Neighbors (KNN)** via Scikit-Learn untuk mengklasifikasikan status pertumbuhan anak berdasarkan parameter usia, tinggi badan, berat badan, dan jenis kelamin.
-*   **Kelurahan Data Integration:** Mengintegrasikan struktur data kependudukan dan rekapitulasi kesehatan anak dari tingkat **kelurahan**, sehingga kader posyandu dapat melakukan pemantauan secara komparatif per wilayah.
-*   **Backend & Database Development:** Membangun RESTful *flow* menggunakan **Flask** serta mengelola penyimpanan data historis menggunakan **SQLite / PostgreSQL**.
-*   **Dashboard & Visualization:** Menyediakan antarmuka visualisasi tren pertumbuhan anak dari waktu ke waktu untuk memudahkan evaluasi jangka panjang.
+* **Machine Learning Integration:** Menerapkan algoritma **K-Nearest Neighbors (KNN)** untuk mengklasifikasikan status pertumbuhan anak berdasarkan parameter **usia (bulan)**, **berat badan**, **tinggi/panjang badan**, dan **jenis kelamin** sesuai standar antropometri nasional.
+* **Kelurahan & Posyandu Data Integration:** Mengintegrasikan struktur data pencatatan rutin bulanan dari tingkat **kelurahan/posyandu**, sehingga kader dapat memantau progres kenaikan berat dan tinggi badan anak secara berkala.
+* **Backend & Database Development:** Membangun RESTful *flow* menggunakan **Flask** serta mengelola penyimpanan data **riwayat pemeriksaan bulanan** yang terstruktur menggunakan **SQLite / PostgreSQL**.
+* **Dashboard & Visualization:** Menyediakan antarmuka visualisasi tren pertumbuhan (grafik berat dan tinggi badan terhadap usia) untuk memudahkan evaluasi jangka panjang di posyandu.
 
 ---
 
 ## 🚀 Fitur Utama
 
-1. **Sinkronisasi Data Kelurahan**
-   * Mengelola data anak dan balita berbasis wilayah kelurahan/posyandu, memudahkan pemangku kepentingan lokal untuk memetakan wilayah yang membutuhkan intervensi gizi lebih cepat.
-
+1. **Pencatatan Rutin Bulanan Posyandu**
+   * Memfasilitasi input data hasil penimbangan dan pengukuran bulanan (usia anak dalam bulan, berat badan, serta tinggi badan) langsung di posyandu atau tingkat kelurahan.
 2. **Prediksi Stunting Berbasis KNN**
-   * Memproses data antropometri (usia, berat badan, tinggi badan, jenis kelamin) menggunakan model KNN untuk memberikan estimasi status gizi anak secara akurat.
-
+   * Memproses parameter **usia (bulan)** serta **antropometri (berat & tinggi)** menggunakan model KNN untuk memberikan estimasi status gizi dan risiko stunting secara akurat setiap kali kunjungan bulanan.
 3. **Growth Monitoring Dashboard**
-   * Dashboard interaktif bagi tenaga kesehatan untuk melihat rekapitulasi status kesehatan balita secara menyeluruh.
-
-4. **Historical Data Tracking & Visualisasi**
-   * Menyimpan riwayat pemeriksaan anak secara berkala dan menampilkan grafik pertumbuhan (*growth chart*) untuk memantau perkembangan fisik dari waktu ke waktu.
-
-5. **Antarmuka yang Ramah Pengguna**
-   * Desain web yang sederhana dan intuitif agar mudah dioperasikan oleh kader posyandu maupun orang tua.
+   * Dashboard interaktif bagi tenaga kesehatan untuk melihat rekapitulasi status kesehatan balita berdasarkan kelompok usia dan wilayah posyandu secara menyeluruh.
+4. **Historical Data Tracking & Visualisasi Kurva Pertumbuhan**
+   * Menyimpan riwayat pemeriksaan dan menampilkan grafik pertumbuhan (*growth chart*) untuk memantau tren kenaikan fisik anak dari bulan ke bulan.
+5. **Antarmuka Ramah Pengguna**
+   * Desain web yang intuitif agar kader posyandu dapat melakukan input data dengan cepat di tengah kesibukan pelayanan bulanan.
 
 ---
 
 ## 💻 Tech Stack
 
-*   **Backend:** Python, Flask
-*   **Machine Learning:** K-Nearest Neighbors (KNN), Scikit-Learn, Pandas, NumPy
-*   **Frontend:** HTML, CSS (Bootstrap / Custom UI)
-*   **Database:** SQLite / PostgreSQL
-*   **Domain Data:** Data Antropometri & Rekapitulasi Kesehatan Kelurahan
+* **Backend:** Python, Flask
+* **Machine Learning:** K-Nearest Neighbors (KNN), Scikit-Learn, Pandas, NumPy
+* **Frontend:** HTML, CSS (Bootstrap / Custom UI)
+* **Database:** SQLite / PostgreSQL
+* **Domain Data:** Data Antropometri Bulanan (Usia, Berat Badan, Tinggi Badan) & Rekapitulasi Posyandu Kelurahan
 
 ---
 
 ## 🤝 Tantangan & Fokus Pengembangan
 
-*   **Data Accuracy:** Menyelaraskan standar pengukuran antropometri nasional dengan model KNN agar hasil prediksi status stunting memiliki tingkat akurasi yang tinggi.
-*   **Territorial Management:** Mengatur struktur basis data agar mampu mengelompokkan data anak berdasarkan wilayah kelurahan secara efisien tanpa memperlambat kinerja aplikasi.
-*   **Usability:** Merancang sistem yang mudah digunakan oleh tenaga kesehatan lapangan yang mungkin memiliki tingkat literasi digital yang beragam.
-
----
-
-## 📸 Tangkapan Layar & Antarmuka
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-
-<div>
-  <strong>Dashboard Pemantauan Wilayah Kelurahan</strong>
-  <img src="/stunting-monitor/dashboard-kelurahan.webp" alt="Dashboard Kelurahan" />
-</div>
-
-<div>
-  <strong>Form Input & Prediksi KNN</strong>
-  <img src="/stunting-monitor/prediksi-knn.webp" alt="Prediksi KNN" />
-</div>
-
-</div>
+* **Akurasi Data Usia & Antropometri Bulanan:** Menyelaraskan perhitungan **usia dalam satuan bulan** (variabel krusial dalam standar antropometri) dengan model KNN untuk memastikan hasil prediksi status stunting tetap akurat di setiap fase pertumbuhan.
+* **Manajemen Riwayat Berkala (*Time-Series Data*):** Mengatur struktur basis data agar mampu merekam dan mengelola tren kenaikan **berat dan tinggi badan per bulan** tanpa menurunkan performa aplikasi saat rekapitulasi massal.
+* **Usability di Lapangan:** Merancang alur input data yang efisien agar kader posyandu dapat memasukkan data berat dan tinggi badan balita dengan cepat dan minim *error* saat kegiatan berlangsung.

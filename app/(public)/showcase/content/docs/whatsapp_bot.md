@@ -1,39 +1,37 @@
-# WA-AI Bot Engine - STB B860H Deployment
+# Bot Whatsapp (Whatsmeow Library)
 
-**WA-AI Bot Engine** adalah sistem otomatisasi pesan WhatsApp berbasis AI yang di-deploy pada perangkat *Set-Top Box* (STB) B860H. Proyek ini bertujuan untuk menciptakan solusi *chatbot* cerdas dengan biaya operasional rendah (low-power), menggunakan bahasa pemrograman Go untuk performa maksimal pada perangkat dengan spesifikasi terbatas.
+**Bot Whatsapp** adalah sistem otomatisasi pesan WhatsApp berbasis AI yang dirancang khusus untuk menghidupkan suasana di dalam grup WhatsApp teman kecil. Proyek ini bertujuan untuk menciptakan solusi *chatbot* cerdas dengan performa tinggi dan respons yang natural.
 
 ---
 
 ## 🛠️ Peran & Tanggung Jawab
 
-Dalam proyek ini, saya membangun sistem dari nol, mulai dari konfigurasi *hardware* hingga pengembangan *logic* AI:
+Dalam proyek ini, saya membangun sistem dari nol, mulai dari konfigurasi dasar hingga pengembangan *logic* AI:
 
-*   **Hardware Orchestration:** Melakukan *re-purposing* STB B860H menjadi server mandiri dengan menginstal Linux environment (Armbian) sebagai *host* aplikasi.
-*   **Backend Development (Go):** Membangun aplikasi *bot* menggunakan bahasa Go dengan *library* **Whatsmeow** untuk koneksi protokol WhatsApp yang stabil dan cepat.
-*   **AI Integration:** Mengintegrasikan **Gemini API** sebagai "otak" untuk memproses pesan masuk dan menghasilkan jawaban yang kontekstual dan natural.
-*   **Optimization:** Melakukan optimasi penggunaan RAM dan CPU pada STB agar proses *long-running* bot tetap stabil 24/7.
+*   **Backend Development (Go):** Membangun aplikasi *bot* menggunakan bahasa Go dengan *library* **Whatsmeow** untuk koneksi protokol WhatsApp yang stabil dan cepat di grup teman kecil.
+*   **AI Integration:** Mengintegrasikan **Gemini API** sebagai "otak" untuk memproses pesan masuk dan menghasilkan jawaban yang kontekstual, santai, dan relevan dengan obrolan.
+*   **Optimization:** Melakukan optimasi kode dan memori agar proses *long-running* bot tetap stabil 24/7.
 
 ---
 
 ## 🚀 Fitur Utama
 
 1. **AI Chat Intelligence**
-   * Menggunakan model Gemini Pro untuk memahami intent pesan pengguna, mulai dari tanya jawab umum, bantuan layanan, hingga pengolahan data sederhana.
+   * Menggunakan model Gemini Pro untuk memahami intent pesan pengguna di dalam grup, mulai dari tanya jawab umum, candaan, hingga obrolan santai antar teman kecil.
 
-2. **Low-Resource Bot Engine**
-   * Berjalan secara efisien di STB B860H (Quad-core ARM) dengan penggunaan memori yang sangat minim berkat efisiensi bahasa Go.
+2. **Smart Response Pipeline**
+   * Sistem *filter* pesan masuk agar bot hanya merespons pesan yang relevan, menjaga kenyamanan percakapan tanpa terlalu spamming.
 
 3. **Multi-Session Handling**
    * Implementasi sistem *session* yang aman menggunakan Whatsmeow untuk menjaga koneksi WhatsApp tetap terhubung tanpa harus sering melakukan QR Scan ulang.
 
-4. **Automatic Response Pipeline**
-   * Sistem *filter* pesan masuk agar bot hanya memproses pesan yang relevan, menghemat penggunaan *token* API Gemini.
+4. **Tools Pendukung Lainnya**
+   * Integrasi utilitas tambahan untuk mendukung fungsionalitas bot, seperti pengelolaan *logging* aktivitas secara *real-time*, sistem manajemen environment, serta otomatisasi *error handling* agar bot dapat pulih sendiri saat terjadi gangguan koneksi.
 
 ---
 
 ## 💻 Tech Stack
 
-*   **Hardware:** STB B860H (Armbian OS)
 *   **Language:** Go (Golang)
 *   **WhatsApp Protocol:** [Whatsmeow](https://github.com/tulir/whatsmeow)
 *   **AI Engine:** Google Gemini API
@@ -43,24 +41,33 @@ Dalam proyek ini, saya membangun sistem dari nol, mulai dari konfigurasi *hardwa
 
 ## 🤝 Tantangan & Fokus Pengembangan
 
-*   **Hardware Limitation:** Mengelola sumber daya perangkat yang terbatas agar proses *encoding* pesan dan interaksi AI tidak menyebabkan *bottleneck* pada CPU STB.
 *   **Connection Stability:** Memastikan *Whatsmeow* dapat melakukan *reconnect* secara otomatis jika koneksi internet terputus atau terjadi *refresh* pada sesi WhatsApp Web.
 *   **AI Response Latency:** Mengatur *timeout* dan *asynchronous processing* agar respon bot tetap terasa cepat meskipun harus menunggu balasan dari API Gemini.
 
 ---
 
-## 📸 Dokumentasi Setup
+## 📸 Dokumentasi Interaksi Bot
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-6">
 
 <div>
-  <strong>Server STB B860H</strong>
-  <img src="/bot-wa/stb-setup.webp" alt="Setup STB B860H" />
+  <strong>Contoh Response</strong>
+  <img src="/bot-wa/bot-wa_4.webp" alt="Contoh Response Bot" />
 </div>
 
 <div>
-  <strong>Terminal Monitoring Bot</strong>
-  <img src="/bot-wa/bot-log.webp" alt="Log Bot Berjalan" />
+  <strong>Interaksi Bot 1</strong>
+  <img src="/bot-wa/bot-wa_1.webp" alt="Interaksi Bot 1" />
+</div>
+
+<div>
+  <strong>Interaksi Bot 2</strong>
+  <img src="/bot-wa/bot-wa_2.webp" alt="Interaksi Bot 2" />
+</div>
+
+<div>
+  <strong>Interaksi Bot 3</strong>
+  <img src="/bot-wa/bot-wa_3.webp" alt="Interaksi Bot 3" />
 </div>
 
 </div>

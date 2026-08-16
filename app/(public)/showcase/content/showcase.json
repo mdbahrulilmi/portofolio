@@ -154,7 +154,7 @@
     },
     {
       "id": "bot-whatsapp",
-      "title": "Bot Whatsapp (Whatsmeow Library)",
+      "title": "Bot Whatsapp",
       "slug": "bot-whatsapp",
       "summary": "Layanan otomatisasi pesan WhatsApp berperforma tinggi menggunakan library Whatsmeow Go dan integrasi kecerdasan buatan Gemini API.",
       "thumbnail": "/showcase/whatsapp-bot/cover.webp",
@@ -263,7 +263,7 @@
         "Appwrite"
       ],
       "links": {
-        "github": "https://github.com/mdbahrulilmi",
+        "github": "https://github.com/mdbahrulilmi/nusantara_recipe",
         "live": []
       },
       "repository": {

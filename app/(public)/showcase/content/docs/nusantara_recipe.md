@@ -47,26 +47,3 @@ Dalam proyek ini, saya bertanggung jawab penuh atas pengembangan aplikasi secara
 *   **Language:** Dart
 *   **Authentication & Database:** Firebase (Firebase Auth & Cloud Firestore untuk penyimpanan data *real-time*)
 *   **Media Handling:** Image Picker (Pengelolaan file gambar)
-
----
-
-## 📸 Tangkapan Layar & Antarmuka
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-
-<div>
-  <strong>Halaman Beranda & Daftar Resep</strong>
-  <img src="/nusantara-recipe/home.webp" alt="Home Page" />
-</div>
-
-<div>
-  <strong>Detail Resep & Bahan</strong>
-  <img src="/nusantara-recipe/detail.webp" alt="Recipe Detail" />
-</div>
-
-<div>
-  <strong>Form Tambah/Edit Resep</strong>
-  <img src="/nusantara-recipe/form-resep.webp" alt="Form Resep" />
-</div>
-
-</div>

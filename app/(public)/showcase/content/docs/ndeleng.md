@@ -57,11 +57,11 @@ Dalam proyek ini, saya membangun aplikasi dari nol dengan fokus pada interaksi A
 
 <div>
   <strong>Halaman Discover (Trending Movies)</strong>
-  <img src="/ndeleng/discover.webp" alt="Discover Page" />
+  <img src="/ndeleng/movies.webp" alt="Discover Page" />
 </div>
 
 <div>
-  <strong>Halaman Detail & Rekomendasi</strong>
+  <strong>Halaman Detail</strong>
   <img src="/ndeleng/detail.webp" alt="Movie Detail" />
 </div>
 
