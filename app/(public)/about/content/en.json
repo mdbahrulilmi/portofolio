@@ -1,23 +1,89 @@
 {
     "back": "Back",
-    "badge": "About Me",
-    "heading": "Hi, I'm Muhammad Bahrul Ilmi",
-    "subheading":
-        "I help businesses and founders turn complex workflows into fast, scalable, and intuitive web applications built for both teams and end-users.",
-    "approachTitle": "Work Approach",
-    "approachText1":
-        "Building a great web app isn't just about making it look pretty; it's about what goes on under the hood. I focus on solid backend architectures, efficient database queries, and seamless responsiveness across all screen sizes.",
-    "approachText2":
-        "I approach every project with a product mindset—solving actual business problems through clean code, thoughtful system design, and scalable infrastructure.",
-    "principlesTitle": "Principles & Values",
-    "highlights": [
-        "Clean & Maintainable Code: Well-structured code that your team can easily scale.",
-        "High Performance & SEO: Optimized for instant load times and search engine visibility.",
-        "Transparent Communication: Clear, plain-English updates without confusing technical jargon.",
-        "End-to-End Delivery: Hands-on experience from database schema design to cloud deployment."
+    "badge": "Professional Profile",
+    "heading": "Hello, I am Muhammad Bahrul Ilmi",
+    "subheading": "I help businesses and founders transform complex workflows into high-performing, efficient, and user-friendly web applications for teams and end-users alike.",
+    "approachTitle": "Working Approach",
+    "approachText1": "Building a website isn't just about a pretty interface, but also what's underneath. For me, good code requires a stable backend architecture, efficient database queries, and a responsive design across all screen sizes.",
+    "approachText2": "Every project I handle is approached from a business perspective—not just writing code, but ensuring the technical solutions truly solve problems and are ready to scale.",
+    "techTitle": "Skills & Domain Expertise",
+    "statsTitle": "Track Record & Portfolio Highlights",
+    "experienceTitle": "Experience & History",
+    "ctaTitle": "Have a project idea or need help?",
+    "ctaSub": "Let's have a casual chat to discuss your web technical needs.",
+    "ctaBtn": "Get in Touch",
+    "descriptiveSkills": [
+      {
+        "category": "Web & Enterprise Solutions",
+        "icon": "layers",
+        "description": "Experienced in designing large-scale digital platforms, learning management systems (LMS), digital product marketplaces, and corporate web portals.",
+        "techs": ["Laravel", "Next.js", "Livewire", "React.js", "Tailwind CSS", "AWS S3", "DOKU Payment"]
+      },
+      {
+        "category": "Mobile App Development",
+        "icon": "code",
+        "description": "Developing cross-platform mobile applications for public services, partner management, and functional directories.",
+        "techs": ["Flutter", "Firebase", "Appwrite", "REST API Integration"]
+      },
+      {
+        "category": "AI, Machine Learning & Data",
+        "icon": "brain",
+        "description": "Implementing artificial intelligence models and data processing for health predictive systems and text sentiment analysis.",
+        "techs": ["Python", "Flask", "Streamlit", "Gemini API", "KNN", "SVM", "Naive Bayes"]
+      },
+      {
+        "category": "Backend Systems & Automation",
+        "icon": "bot",
+        "description": "Building high-performance message automation systems using modern programming languages with robust architectures.",
+        "techs": ["Go (Golang)", "Whatsmeow Library", "Node.js", "Express.js", "MySQL", "PostgreSQL"]
+      }
     ],
-    "techTitle": "Tech Stack & Tools",
-    "ctaTitle": "Have a project in mind?",
-    "ctaSub": "Let's discuss your technical needs and build something solid together.",
-    "ctaBtn": "Get in Touch"
+    "statsHighlights": [
+      {
+        "icon": "git",
+        "title": "10+ Completed Projects",
+        "desc": "Includes corporate web apps, LMS systems, and commercial digital platforms."
+      },
+      {
+        "icon": "smartphone",
+        "title": "Public Mobile Apps",
+        "desc": "Experienced in releasing cross-platform applications to the Google Play Store."
+      },
+      {
+        "icon": "brain",
+        "title": "AI & Machine Learning Integration",
+        "desc": "Implemented predictive models, NLP, and Gemini API integrations."
+      },
+      {
+        "icon": "globe",
+        "title": "Full-Stack End-to-End",
+        "desc": "Handling everything from database architecture design and backend to cloud deployment."
+      }
+    ],
+    "experiences": [
+      {
+        "role": "Fullstack Developer",
+        "company": "PT Bumi Tekno Indonesia",
+        "period": "2026 - Present",
+        "location": "Temanggung, Indonesia",
+        "description": "Building and deploying high-performance web applications for various clients. Focused on secure backend architecture, efficient database integration, and responsive interfaces.",
+        "type": "Experience"
+      },
+      {
+        "role": "Mobile Developer Intern",
+        "company": "PT Bumi Tekno Indonesia",
+        "period": "2025 - 2026 (6 Months)",
+        "location": "Temanggung, Indonesia",
+        "description": "Developing and optimizing cross-platform mobile applications, integrating REST APIs, and ensuring smooth functionality for end-users.",
+        "type": "Experience"
+      },
+      {
+        "role": "Bachelor of Computer Science (Informatics Engineering)",
+        "company": "Universitas Islam Nahdlatul Ulama di Jepara",
+        "period": "2021 - 2025",
+        "location": "Jepara, Indonesia",
+        "description": "Studied software engineering, algorithms, database management, and the implementation of modern web systems in depth.",
+        "type": "Education"
+      }
+    ]
 }

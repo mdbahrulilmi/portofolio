@@ -1,23 +1,89 @@
 {
     "back": "Kembali",
-    "badge": "About Me",
+    "badge": "Professional Profile",
     "heading": "Halo, Saya Muhammad Bahrul Ilmi",
-    "subheading":
-    "Saya membantu bisnis dan founder mengubah alur kerja rumit menjadi aplikasi web yang cepat, efisien, dan mudah digunakan oleh tim maupun pengguna akhir.",
+    "subheading": "Saya membantu bisnis dan founder mengubah alur kerja rumit menjadi aplikasi web yang cepat, efisien, dan mudah digunakan oleh tim maupun pengguna akhir.",
     "approachTitle": "Pendekatan Kerja",
-    "approachText1":
-    "Bikin web itu bukan cuma soal tampilannya cantik di layar, tapi juga dalemannya. Bagi saya, kodingan yang baik harus punya arsitektur backend yang stabil, query database yang efisien, dan antarmuka yang responsif di segala ukuran layar.",
-    "approachText2":
-    "Setiap proyek saya garap dari sudut pandang bisnis—bukan sekadar nulis kode, tapi juga memastikan solusi teknis yang dibuat benar-benar menyelesaikan masalah dan siap di-scale.",
-    "principlesTitle": "Prinsip & Nilai Kerja",
-    "highlights": [
-        "Clean Code & Arsitektur Scalable: Kodingan rapi dan gampang di-maintain oleh tim.",
-        "Performa Super Cepat & SEO: Web dioptimasi agar loading instan dan mudah ditemukan di Google.",
-        "Komunikasi Transparan: Tanpa istilah teknis yang ribet, fokus pada solusi bisnis.",
-        "End-to-End Delivery: Berpengalaman membangun dari skema database hingga deployment ke cloud."
-    ],
-    "techTitle": "Teknologi & Tools",
+    "approachText1": "Bikin web itu bukan cuma soal tampilannya cantik di layar, tapi juga dalemannya. Bagi saya, kodingan yang baik harus punya arsitektur backend yang stabil, query database yang efisien, dan antarmuka yang responsif di segala ukuran layar.",
+    "approachText2": "Setiap proyek saya garap dari sudut pandang bisnis—bukan sekadar nulis kode, tapi juga memastikan solusi teknis yang dibuat benar-benar menyelesaikan masalah dan siap di-scale.",
+    "techTitle": "Keahlian & Spesialisasi Domain",
+    "statsTitle": "Rekam Jejak & Portofolio Singkat",
+    "experienceTitle": "Pengalaman & Riwayat",
     "ctaTitle": "Punya ide proyek atau butuh bantuan?",
     "ctaSub": "Mari ngobrol santai untuk bahas kebutuhan teknis web kamu.",
-    "ctaBtn": "Hubungi Saya"
+    "ctaBtn": "Hubungi Saya",
+    "descriptiveSkills": [
+      {
+        "category": "Web & Enterprise Solutions",
+        "icon": "layers",
+        "description": "Berpengalaman merancang platform digital skala besar, sistem manajemen pembelajaran (LMS), marketplace produk digital, dan portal web korporat.",
+        "techs": ["Laravel", "Next.js", "Livewire", "React.js", "Tailwind CSS", "AWS S3", "DOKU Payment"]
+      },
+      {
+        "category": "Mobile App Development",
+        "icon": "code",
+        "description": "Mengembangkan aplikasi mobile lintas platform (Cross-platform) untuk layanan publik, manajemen mitra, hingga direktori fungsional.",
+        "techs": ["Flutter", "Firebase", "Appwrite", "REST API Integration"]
+      },
+      {
+        "category": "AI, Machine Learning & Data",
+        "icon": "brain",
+        "description": "Menerapkan model kecerdasan buatan dan pengolahan data untuk sistem prediktif kesehatan serta analisis sentimen teks.",
+        "techs": ["Python", "Flask", "Streamlit", "Gemini API", "KNN", "SVM", "Naive Bayes"]
+      },
+      {
+        "category": "Backend Systems & Automation",
+        "icon": "bot",
+        "description": "Membangun sistem otomatisasi pesan berperforma tinggi menggunakan bahasa pemrograman modern dengan arsitektur yang tangguh.",
+        "techs": ["Go (Golang)", "Whatsmeow Library", "Node.js", "Express.js", "MySQL", "PostgreSQL"]
+      }
+    ],
+    "statsHighlights": [
+      {
+        "icon": "git",
+        "title": "10+ Proyek Selesai",
+        "desc": "Mencakup aplikasi web korporat, sistem LMS, dan platform digital komersial."
+      },
+      {
+        "icon": "smartphone",
+        "title": "Aplikasi Mobile Publik",
+        "desc": "Berpengalaman merilis aplikasi cross-platform ke Google Play Store."
+      },
+      {
+        "icon": "brain",
+        "title": "Integrasi AI & Machine Learning",
+        "desc": "Mengimplementasikan model prediktif, NLP, hingga Gemini API."
+      },
+      {
+        "icon": "globe",
+        "title": "Full-Stack End-to-End",
+        "desc": "Menangani dari perancangan arsitektur database, backend, hingga cloud deployment."
+      }
+    ],
+    "experiences": [
+      {
+        "role": "Fullstack Developer",
+        "company": "PT Bumi Tekno Indonesia",
+        "period": "2026 - Present",
+        "location": "Temanggung, Indonesia",
+        "description": "Membangun dan mendeploy aplikasi web berperforma tinggi untuk berbagai klien. Fokus pada arsitektur backend yang aman, integrasi database efisien, dan antarmuka responsif.",
+        "type": "Experience"
+      },
+      {
+        "role": "Magang Mobile Developer",
+        "company": "PT Bumi Tekno Indonesia",
+        "period": "2025 - 2026 (6 Bulan)",
+        "location": "Temanggung, Indonesia",
+        "description": "Mengembangkan dan mengoptimalkan aplikasi mobile lintas platform, mengintegrasikan REST API, serta memastikan fungsionalitas berjalan lancar bagi pengguna.",
+        "type": "Experience"
+      },
+      {
+        "role": "Sarjana Komputer (Teknik Informatika)",
+        "company": "Universitas Islam Nahdlatul Ulama di Jepara",
+        "period": "2021 - 2025",
+        "location": "Jepara, Indonesia",
+        "description": "Mempelajari rekayasa perangkat lunak, algoritma, manajemen basis data, serta implementasi sistem web modern secara mendalam.",
+        "type": "Education"
+      }
+    ]
 }
