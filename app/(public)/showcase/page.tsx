@@ -23,22 +23,21 @@ export default function ShowcasePage() {
         );
 
   return (
-    <main className="relative min-h-screen py-12 sm:py-16 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-blue-500/10 dark:bg-blue-500/5 blur-[140px] pointer-events-none rounded-full" />
+    <main className="relative min-h-screen py-12 sm:py-16 overflow-hidden bg-white">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-blue-500/10 blur-[140px] pointer-events-none rounded-full" />
       <div className="relative max-w-6xl mx-auto px-6">
 
         <div className="mb-12 md:mb-16">
-          
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6 text-blue-950">
             Kumpulan Proyek Pilihan<span className="text-blue-500">.</span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-blue-950/80 dark:text-blue-200/80 leading-relaxed font-normal max-w-3xl">
+          <p className="text-lg sm:text-xl text-blue-950/80 leading-relaxed font-normal max-w-3xl">
             Eksplorasi mendalam mengenai hasil karya rekayasa perangkat lunak, sistem backend berperforma tinggi, dan aplikasi web modern.
           </p>
         </div>
         
-        <div className="flex flex-wrap items-center gap-2 mb-12 p-1.5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs w-fit">
+        <div className="flex flex-wrap items-center gap-2 mb-12 p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xs w-fit">
           {categories.map((category) => {
             const isActive = activeCategory === category;
             return (
@@ -47,8 +46,8 @@ export default function ShowcasePage() {
                 onClick={() => setActiveCategory(category)}
                 className={`relative px-5 py-2.5 rounded-xl text-xs md:text-sm font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-zinc-950 shadow-xs scale-[1.02]"
-                    : "bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                    ? "bg-blue-600 text-white shadow-xs scale-[1.02]"
+                    : "bg-white text-blue-950/70 hover:text-blue-950 hover:bg-blue-50"
                 }`}
               >
                 {category}
@@ -76,10 +75,10 @@ export default function ShowcasePage() {
             })}
           </div>
         ) : (
-          <div className="text-center py-24 border border-dashed border-zinc-200 dark:border-zinc-800 rounded-3xl bg-white dark:bg-zinc-900/50">
-            <FolderGit2 className="w-10 h-10 mx-auto text-zinc-400 mb-3 opacity-50" />
-            <p className="text-zinc-500 dark:text-zinc-400 text-sm font-medium">
-              Belum ada proyek dalam kategori <span className="text-blue-600 dark:text-blue-400 font-semibold">{activeCategory}</span>.
+          <div className="text-center py-24 border border-dashed border-blue-200 rounded-3xl bg-white">
+            <FolderGit2 className="w-10 h-10 mx-auto text-blue-400 mb-3 opacity-50" />
+            <p className="text-blue-950/70 text-sm font-medium">
+              Belum ada proyek dalam kategori <span className="text-blue-600 font-semibold">{activeCategory}</span>.
             </p>
           </div>
         )}

@@ -18,14 +18,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-blue-100 dark:border-blue-950 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
+    <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/80 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         
         {/* Brand / Logo */}
         <div className="flex-1">
           <a 
             href="/" 
-            className="text-lg font-bold tracking-tight text-blue-950 dark:text-white hover:opacity-80 transition-opacity"
+            className="text-lg font-bold tracking-tight text-blue-950 hover:opacity-80 transition-opacity"
           >
             Mdbahrulilmi<span className="text-blue-500">.</span>
           </a>
@@ -33,15 +33,15 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <ul className="flex items-center gap-6 text-sm font-semibold text-blue-950/80 dark:text-blue-200/80">
+          <ul className="flex items-center gap-6 text-sm font-semibold text-blue-950/80">
             {/* Language Switcher */}
-            <li className="flex items-center gap-1 p-1 bg-white dark:bg-blue-950/40 rounded-full border border-blue-200 dark:border-blue-900 shadow-xs">
+            <li className="flex items-center gap-1 p-1 bg-white rounded-full border border-blue-200 shadow-xs">
               <button
                 onClick={() => setLang("id")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   lang === "id" 
-                    ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-zinc-950 shadow-xs" 
-                    : "text-blue-950/60 dark:text-blue-300 hover:text-blue-950 dark:hover:text-white"
+                    ? "bg-blue-600 text-white shadow-xs" 
+                    : "text-blue-950/60 hover:text-blue-950"
                 }`}
               >
                 ID
@@ -50,8 +50,8 @@ export default function Navbar() {
                 onClick={() => setLang("en")}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   lang === "en" 
-                    ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-zinc-950 shadow-xs" 
-                    : "text-blue-950/60 dark:text-blue-300 hover:text-blue-950 dark:hover:text-white"
+                    ? "bg-blue-600 text-white shadow-xs" 
+                    : "text-blue-950/60 hover:text-blue-950"
                 }`}
               >
                 EN
@@ -64,8 +64,8 @@ export default function Navbar() {
                 href="/about" 
                 className={`relative py-1 transition-colors ${
                   isActive("/about") 
-                    ? "text-blue-600 dark:text-blue-400 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
-                    : "hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-blue-600 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
+                    : "hover:text-blue-600"
                 }`}
               >
                 About
@@ -76,8 +76,8 @@ export default function Navbar() {
                 href="/showcase" 
                 className={`relative py-1 transition-colors ${
                   isActive("/showcase") 
-                    ? "text-blue-600 dark:text-blue-400 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
-                    : "hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-blue-600 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
+                    : "hover:text-blue-600"
                 }`}
               >
                 Showcase
@@ -88,8 +88,8 @@ export default function Navbar() {
                 href="/docs" 
                 className={`relative py-1 transition-colors ${
                   isActive("/docs") 
-                    ? "text-blue-600 dark:text-blue-400 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
-                    : "hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-blue-600 font-bold after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-500 after:rounded-full" 
+                    : "hover:text-blue-600"
                 }`}
               >
                 Docs
@@ -100,8 +100,8 @@ export default function Navbar() {
                 href="/connect" 
                 className={`px-4 py-2 rounded-full border transition-all shadow-xs ${
                   isActive("/connect")
-                    ? "bg-blue-700 text-white border-blue-800 dark:bg-blue-600"
-                    : "border-blue-200 dark:border-blue-800 bg-blue-600 text-white hover:bg-blue-500"
+                    ? "bg-blue-700 text-white border-blue-800"
+                    : "border-blue-200 bg-blue-600 text-white hover:bg-blue-500"
                 }`}
               >
                 Connect
@@ -113,13 +113,13 @@ export default function Navbar() {
         {/* Mobile Nav Toggle */}
         <div className="flex items-center gap-3 md:hidden">
           {/* Mobile Language Switcher */}
-          <div className="flex items-center gap-1 p-1 bg-white dark:bg-blue-950/40 rounded-full border border-blue-200 dark:border-blue-900 shadow-xs">
+          <div className="flex items-center gap-1 p-1 bg-white rounded-full border border-blue-200 shadow-xs">
             <button
               onClick={() => setLang("id")}
               className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                 lang === "id" 
-                  ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-zinc-950 shadow-xs" 
-                  : "text-blue-950/60 dark:text-blue-300"
+                  ? "bg-blue-600 text-white shadow-xs" 
+                  : "text-blue-950/60"
               }`}
             >
               ID
@@ -128,8 +128,8 @@ export default function Navbar() {
               onClick={() => setLang("en")}
               className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
                 lang === "en" 
-                  ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-zinc-950 shadow-xs" 
-                  : "text-blue-950/60 dark:text-blue-300"
+                  ? "bg-blue-600 text-white shadow-xs" 
+                  : "text-blue-950/60"
               }`}
             >
               EN
@@ -138,7 +138,7 @@ export default function Navbar() {
 
           <button
             onClick={toggleMenu}
-            className="p-2 text-blue-950 dark:text-blue-200 hover:text-blue-600 focus:outline-none transition-colors"
+            className="p-2 text-blue-950 hover:text-blue-600 focus:outline-none transition-colors"
             aria-label="Toggle Menu"
           >
             <svg
@@ -163,13 +163,13 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-blue-100 dark:border-blue-950 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md px-6 py-6 transition-all shadow-xl">
-          <ul className="flex flex-col gap-4 text-sm font-semibold text-blue-950/80 dark:text-blue-200/80">
+        <div className="md:hidden border-t border-blue-100 bg-white/95 backdrop-blur-md px-6 py-6 transition-all shadow-xl">
+          <ul className="flex flex-col gap-4 text-sm font-semibold text-blue-950/80">
             <li>
               <a 
                 href="/about" 
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 transition-colors ${isActive("/about") ? "text-blue-600 dark:text-blue-400 font-bold" : "hover:text-blue-600"}`}
+                className={`block py-2 transition-colors ${isActive("/about") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 About
               </a>
@@ -178,7 +178,7 @@ export default function Navbar() {
               <a 
                 href="/showcase" 
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 transition-colors ${isActive("/showcase") ? "text-blue-600 dark:text-blue-400 font-bold" : "hover:text-blue-600"}`}
+                className={`block py-2 transition-colors ${isActive("/showcase") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 Showcase
               </a>
@@ -187,7 +187,7 @@ export default function Navbar() {
               <a 
                 href="/docs" 
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 transition-colors ${isActive("/docs") ? "text-blue-600 dark:text-blue-400 font-bold" : "hover:text-blue-600"}`}
+                className={`block py-2 transition-colors ${isActive("/docs") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 Docs
               </a>
@@ -196,7 +196,7 @@ export default function Navbar() {
               <a 
                 href="/connect" 
                 onClick={() => setIsOpen(false)}
-                className="block text-center w-full px-4 py-2.5 rounded-full border border-blue-200 dark:border-blue-800 bg-blue-600 shadow-xs text-white hover:bg-blue-500 transition-all"
+                className="block text-center w-full px-4 py-2.5 rounded-full border border-blue-200 bg-blue-600 shadow-xs text-white hover:bg-blue-500 transition-all"
               >
                 Connect
               </a>

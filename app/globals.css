@@ -1,3 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
+
+@variant dark (&:not(*));
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #020817;
+}

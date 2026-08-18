@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 
 function getCategoryBadgeColor(category: string) {
     const c = category.toLowerCase();
-    if (c.includes("web") && c.includes("mobile")) return "bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/60 dark:text-indigo-300 dark:border-indigo-800";
-    if (c.includes("web")) return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800";
-    if (c.includes("mobile")) return "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800";
-    if (c.includes("bot")) return "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800";
+    if (c.includes("web") && c.includes("mobile")) return "bg-indigo-50 text-indigo-700 border-indigo-200";
+    if (c.includes("web")) return "bg-blue-50 text-blue-700 border-blue-200";
+    if (c.includes("mobile")) return "bg-emerald-50 text-emerald-700 border-emerald-200";
+    if (c.includes("bot")) return "bg-amber-50 text-amber-700 border-amber-200";
     
-    return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800";
+    return "bg-blue-50 text-blue-700 border-blue-200";
 }
 
 export default function ShowcaseCard({
@@ -23,10 +23,10 @@ export default function ShowcaseCard({
     return (
         <div 
             onClick={() => router.push(`/showcase/${project.slug}`)}
-            className="card h-full flex flex-col justify-between p-6 bg-white dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/50 rounded-xl hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-md transition-all duration-200 cursor-pointer"
+            className="card h-full flex flex-col justify-between p-6 bg-white border border-blue-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer"
         >
             <div>
-                {/* Header: Category Badge (Warna-warni sesuai kategori) & External Links */}
+                {/* Header: Category Badge & External Links */}
                 <div className="flex items-center justify-between mb-4">
                     <span className={`px-2.5 py-1 text-xs font-semibold rounded-md border ${getCategoryBadgeColor(project.category)}`}>
                         {project.category}
@@ -41,7 +41,7 @@ export default function ShowcaseCard({
                                 href={project.githubUrl}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-1.5 rounded-lg text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors"
+                                className="p-1.5 rounded-lg text-blue-600 hover:bg-blue-50 transition-colors"
                                 title="View Source Code"
                             >
                                 <svg
@@ -58,7 +58,7 @@ export default function ShowcaseCard({
                                 href={project.liveUrl}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-1.5 rounded-lg text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors"
+                                className="p-1.5 rounded-lg text-blue-600 hover:bg-blue-50 transition-colors"
                                 title="Live Preview"
                             >
                                 <ExternalLink className="w-4 h-4" />
@@ -69,21 +69,21 @@ export default function ShowcaseCard({
 
                 {/* Title & Summary */}
                 <div>
-                    <h3 className="text-lg font-bold text-blue-950 dark:text-blue-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between gap-2">
+                    <h3 className="text-lg font-bold text-blue-950 hover:text-blue-600 transition-colors flex items-center justify-between gap-2">
                         <span>{project.title}</span>
                         <ArrowUpRight className="w-4 h-4 text-blue-500" />
                     </h3>
-                    <p className="text-sm text-blue-950/80 dark:text-blue-200/80 mt-2 mb-6 line-clamp-3">
+                    <p className="text-sm text-blue-950/80 mt-2 mb-6 line-clamp-3">
                         {project.summary}
                     </p>
                 </div>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 border-t border-blue-100 dark:border-blue-950 pt-4 mt-auto">
+            <div className="flex flex-wrap gap-1.5 border-t border-blue-100 pt-4 mt-auto">
                 {project.techStack?.map((tech: string) => (
                     <span
                         key={tech}
-                        className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded bg-blue-50/60 dark:bg-blue-950/40 text-blue-900 dark:text-blue-200 border border-blue-100 dark:border-blue-900/50"
+                        className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded bg-blue-50/60 text-blue-900 border border-blue-100"
                     >
                         <Code2 className="w-3 h-3 text-blue-500" />
                         {tech}

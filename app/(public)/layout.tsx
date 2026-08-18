@@ -9,10 +9,7 @@ import { Analytics } from "@vercel/analytics/next"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mdbahrulilmi.my.id";
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
-  ],
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
