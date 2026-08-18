@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/app/(public)/providers/LanguageProvider";
 
@@ -18,17 +19,17 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/80 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
+    <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/85 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         
         {/* Brand / Logo */}
         <div className="flex-1">
-          <a 
+          <Link 
             href="/" 
             className="text-lg font-bold tracking-tight text-blue-950 hover:opacity-80 transition-opacity"
           >
             Mdbahrulilmi<span className="text-blue-500">.</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -60,7 +61,7 @@ export default function Navbar() {
 
             {/* Menu Links dengan Garis Bawah Biru jika Aktif */}
             <li>
-              <a 
+              <Link 
                 href="/about" 
                 className={`relative py-1 transition-colors ${
                   isActive("/about") 
@@ -69,10 +70,10 @@ export default function Navbar() {
                 }`}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
+              <Link 
                 href="/showcase" 
                 className={`relative py-1 transition-colors ${
                   isActive("/showcase") 
@@ -81,10 +82,10 @@ export default function Navbar() {
                 }`}
               >
                 Showcase
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
+              <Link 
                 href="/docs" 
                 className={`relative py-1 transition-colors ${
                   isActive("/docs") 
@@ -93,10 +94,10 @@ export default function Navbar() {
                 }`}
               >
                 Docs
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
+              <Link 
                 href="/connect" 
                 className={`px-4 py-2 rounded-full border transition-all shadow-xs ${
                   isActive("/connect")
@@ -105,7 +106,7 @@ export default function Navbar() {
                 }`}
               >
                 Connect
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -166,40 +167,40 @@ export default function Navbar() {
         <div className="md:hidden border-t border-blue-100 bg-white/95 backdrop-blur-md px-6 py-6 transition-all shadow-xl">
           <ul className="flex flex-col gap-4 text-sm font-semibold text-blue-950/80">
             <li>
-              <a 
+              <Link 
                 href="/about" 
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/about") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
+              <Link 
                 href="/showcase" 
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/showcase") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 Showcase
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
+              <Link 
                 href="/docs" 
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/docs") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
                 Docs
-              </a>
+              </Link>
             </li>
             <li className="pt-2">
-              <a 
+              <Link 
                 href="/connect" 
                 onClick={() => setIsOpen(false)}
                 className="block text-center w-full px-4 py-2.5 rounded-full border border-blue-200 bg-blue-600 shadow-xs text-white hover:bg-blue-500 transition-all"
               >
                 Connect
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
