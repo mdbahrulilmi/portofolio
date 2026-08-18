@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { LanguageProvider } from "./providers/LanguageProvider";
 import "highlight.js/styles/github.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mdbahrulilmi.my.id";
 
@@ -143,6 +144,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
