@@ -19,6 +19,10 @@ body {
   border-color: #162456 !important;
 }
 
+.prose code{
+  color: #fff !important;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
