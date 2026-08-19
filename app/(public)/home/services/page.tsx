@@ -40,14 +40,6 @@ export default function Services() {
                 <p className="text-zinc-600 leading-relaxed mb-4 max-w-md">
                   {service.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-medium text-zinc-400">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               <a
