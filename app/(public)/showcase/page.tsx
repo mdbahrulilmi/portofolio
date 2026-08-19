@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Sparkles, FolderGit2 } from "lucide-react";
-import showcase from "./content/showcase.json";
+import showcase from "@/content/showcase.json";
 import ShowcaseCard from "./components/ShowcaseCard";
 
 export default function ShowcasePage() {

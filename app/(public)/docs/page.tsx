@@ -1,218 +1,157 @@
 "use client";
 
 import { useState } from "react";
-import { BookOpen, Terminal, Code2, Server, Shield, Cpu, ChevronRight } from "lucide-react";
+import { BookOpen, Terminal, Code2, Server, Shield, Cpu, ChevronRight, Calendar, Search } from "lucide-react";
 
-export default function DocsPage() {
-  const [activeTab, setActiveTab] = useState("overview");
+export default function LearningBlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const menu = [
-    { id: "overview", label: "Ringkasan & Standar", icon: BookOpen },
-    { id: "tech-stack", label: "Arsitektur Tech Stack", icon: Cpu },
-    { id: "frontend-guidelines", label: "Panduan Frontend", icon: Code2 },
-    { id: "backend-guidelines", label: "Panduan Backend & API", icon: Server },
-    { id: "deployment-security", label: "Deploy & Keamanan", icon: Shield },
+  // Contoh data catatan belajar kamu (Bisa dipindah ke file JSON terpisah nanti)
+  const notes = [
+    {
+      id: "laravel-eloquent-optimization",
+      slug: "laravel-eloquent-optimization",
+      category: "backend",
+      title: "Optimasi Query Eloquent Laravel agar Terhindar dari N+1 Problem",
+      summary: "Catatan belajar cara menggunakan eager loading (with) dan chunking untuk performa database Laravel yang masif.",
+      date: "19 Agustus 2026",
+      readTime: "4 min read",
+      icon: Server,
+    },
+    {
+      id: "nextjs-app-router-seo",
+      slug: "nextjs-app-router-seo",
+      category: "frontend",
+      title: "Mengatur Dynamic Metadata & Sitemap di Next.js App Router untuk SEO",
+      summary: "Eksplorasi cara memaksimalkan generateMetadata dan robots.txt agar website portofolio atau blog gampang diindeks Google.",
+      date: "18 Agustus 2026",
+      readTime: "5 min read",
+      icon: Code2,
+    },
+    {
+      id: "whatsmeow-golang-bot",
+      slug: "whatsmeow-golang-bot",
+      category: "systems",
+      title: "Membuat WhatsApp Gateway Berperforma Tinggi dengan Go & Whatsmeow",
+      summary: "Catatan setup library Whatsmeow di Golang untuk menangani webhook pesan otomatis tanpa ngadat.",
+      date: "15 Agustus 2026",
+      readTime: "6 min read",
+      icon: Terminal,
+    },
   ];
+
+  const categories = [
+    { id: "all", label: "Semua Catatan" },
+    { id: "backend", label: "Laravel & Backend" },
+    { id: "frontend", label: "Frontend & Next.js" },
+    { id: "systems", label: "Go & Automation" },
+  ];
+
+  // Filter catatan berdasarkan kategori & pencarian
+  const filteredNotes = notes.filter((note) => {
+    const matchesCategory = selectedCategory === "all" || note.category === selectedCategory;
+    const matchesSearch = note.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          note.summary.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-white font-sans text-blue-950 flex flex-col justify-between transition-colors">
+      <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-12 sm:py-16">
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8 sm:py-12">
-
+        {/* Header Blog / Catatan Belajar */}
         <div className="border-b border-blue-100 pb-8 mb-10">
+          <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block mb-4">
+            Knowledge Base & Learning Log
+          </span>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-blue-950">
-            Dokumentasi Sistem & Standar Kerja<span className="text-blue-500">.</span>
+            Catatan Belajar & Eksplorasi Kode<span className="text-blue-500">.</span>
           </h1>
           <p className="mt-3 text-sm sm:text-base text-blue-950/80 max-w-2xl leading-relaxed">
-            Panduan teknis, standar arsitektur kode, serta alur pengembangan aplikasi web yang saya terapkan di setiap proyek.
+            Tempat saya mendokumentasikan proses belajar Laravel, optimasi arsitektur fullstack, dan berbagai trik pemrograman harian.
           </p>
         </div>
 
-        {/* Documentation Layout (Sidebar + Content) */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* SEARCH & FILTER BAR */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between mb-10">
           
-          {/* SIDEBAR NAVIGATION */}
-          <aside className="md:col-span-1 space-y-1">
-            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-blue-600 mb-3">
-              Daftar Isi
-            </p>
-            {menu.map((item) => {
-              const Icon = item.icon;
-              const isActive = activeTab === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveTab(item.id)}
-                  className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                    isActive
-                      ? "bg-blue-600 text-white shadow-xs"
-                      : "text-blue-950/70 hover:bg-blue-50 hover:text-blue-950"
-                  }`}
-                >
-                  <span className="flex items-center gap-2.5">
-                    <Icon className="w-4 h-4 shrink-0" />
-                    {item.label}
-                  </span>
-                  {isActive && <ChevronRight className="w-3.5 h-3.5 opacity-80" />}
-                </button>
-              );
-            })}
-          </aside>
+          {/* Kategori Filter */}
+          <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                  selectedCategory === cat.id
+                    ? "bg-blue-600 text-white shadow-xs"
+                    : "bg-zinc-50 text-blue-950/70 border border-zinc-200 hover:bg-blue-50"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
 
-          {/* MAIN CONTENT AREA */}
-          <article className="md:col-span-3 prose prose-blue max-w-none text-blue-950/90">
-            
-            {/* TAB 1: OVERVIEW */}
-            {activeTab === "overview" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-blue-950">Ringkasan & Standar Proyek</h2>
-                <p className="text-sm sm:text-base leading-relaxed text-blue-950/80">
-                  Setiap produk digital yang dibangun memegang tiga prinsip utama: <strong className="text-blue-950">Kinerja Tinggi</strong>, <strong className="text-blue-950">Kemudahan Perawatan (Maintainability)</strong>, dan <strong className="text-blue-950">Keamanan Terjamin</strong>.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <div className="p-5 rounded-2xl bg-white border border-blue-200/80 shadow-xs">
-                    <h3 className="text-base font-bold text-blue-950 mb-1">Clean Architecture</h3>
-                    <p className="text-xs text-blue-950/80 leading-relaxed">
-                      Pemisahan yang jelas antara lapisan UI (Frontend), Logika Bisnis, dan Basis Data (Backend).
-                    </p>
-                  </div>
-                  <div className="p-5 rounded-2xl bg-white border border-blue-200/80 shadow-xs">
-                    <h3 className="text-base font-bold text-blue-950 mb-1">Type Safety</h3>
-                    <p className="text-xs text-blue-950/80 leading-relaxed">
-                      Penggunaan TypeScript secara penuh dari frontend hingga backend untuk meminimalisir error saat runtime.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 text-xs sm:text-sm">
-                  💡 <strong>Note:</strong> Dokumentasi ini dirancang agar tim pengembang lain atau klien dapat dengan mudah mengintegrasikan dan melanjutkan pengembangan sistem tanpa <em>technical debt</em>.
-                </div>
-              </div>
-            )}
-
-            {/* TAB 2: TECH STACK */}
-            {activeTab === "tech-stack" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-blue-950">Arsitektur Tech Stack</h2>
-                <p className="text-sm sm:text-base leading-relaxed text-blue-950/80">
-                  Kombinasi <em>stack</em> modern pilihan yang dioptimalkan untuk performa maksimal dan skala besar.
-                </p>
-
-                <div className="overflow-hidden rounded-2xl border border-blue-200 my-6 shadow-xs">
-                  <table className="w-full text-left text-xs sm:text-sm">
-                    <thead className="bg-blue-50 border-b border-blue-200 text-blue-950 font-bold">
-                      <tr>
-                        <th className="p-3.5">Layer</th>
-                        <th className="p-3.5">Teknologi Utama</th>
-                        <th className="p-3.5">Alasan Pemilihan</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-blue-100 text-blue-950/80 bg-white">
-                      <tr>
-                        <td className="p-3.5 font-bold text-blue-950">Frontend</td>
-                        <td className="p-3.5">Next.js (App Router), Tailwind CSS</td>
-                        <td className="p-3.5">SEO-friendly, SSR/SSG instan, UI responsif.</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-blue-950">Backend</td>
-                        <td className="p-3.5">Node.js, Express / Hono, Prisma ORM</td>
-                        <td className="p-3.5">API secepat kilat, pengelolaan kueri database yang aman.</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-blue-950">Database</td>
-                        <td className="p-3.5">PostgreSQL / Supabase, Redis</td>
-                        <td className="p-3.5">Integritas data relasional + caching memori super cepat.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 3: FRONTEND */}
-            {activeTab === "frontend-guidelines" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-blue-950">Panduan Standar Frontend</h2>
-                <p className="text-sm sm:text-base leading-relaxed text-blue-950/80">
-                  Aturan pengembangan komponen antarmuka untuk menjaga konsistensi desain dan keterbacaan kode.
-                </p>
-
-                <div className="p-5 rounded-2xl bg-zinc-900 text-zinc-100 font-mono text-xs overflow-x-auto my-4 border border-blue-900">
-                  <span className="text-zinc-500">// Struktur Komponen React yang Direkomendasikan</span>
-                  <br />
-                  <span className="text-purple-400">export default function</span> <span className="text-blue-400">Card</span>({"{"} title, description {"}"}: Props) {"{"}
-                  <br />
-                  &nbsp;&nbsp;<span className="text-purple-400">return</span> (
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span className="text-red-400">div</span> <span className="text-yellow-400">className</span>=<span className="text-green-400">"p-6 rounded-2xl bg-white border border-blue-200 shadow-xs"</span>&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span className="text-red-400">h3</span> <span className="text-yellow-400">className</span>=<span className="text-green-400">"font-bold text-blue-950"</span>&gt;{"{"}title{"}"}&lt;/<span className="text-red-400">h3</span>&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span className="text-red-400">p</span> <span className="text-yellow-400">className</span>=<span className="text-green-400">"text-sm text-blue-950/80"</span>&gt;{"{"}description{"}"}&lt;/<span className="text-red-400">p</span>&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span className="text-red-400">div</span>&gt;
-                  <br />
-                  &nbsp;&nbsp;);
-                  <br />
-                  {"}"}
-                </div>
-
-                <ul className="space-y-2 text-xs sm:text-sm text-blue-950/80 list-disc list-inside">
-                  <li>Gunakan <strong>Atomic Component Strategy</strong> untuk elemen reusabel.</li>
-                  <li>Wajib menerapkan kriteria aksesibilitas dasar (semantic HTML & ARIA labels).</li>
-                  <li>Semua <em>asset</em> gambar dioptimasi menggunakan Next.js <code>Image</code> component.</li>
-                </ul>
-              </div>
-            )}
-
-            {/* TAB 4: BACKEND */}
-            {activeTab === "backend-guidelines" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-blue-950">Panduan Backend & API</h2>
-                <p className="text-sm sm:text-base leading-relaxed text-blue-950/80">
-                  Semua endpoint API dibangun dengan arsitektur <strong>RESTful</strong> dan mengembalikan respons berformat JSON yang terstandarisasi.
-                </p>
-
-                <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-200 text-xs font-mono text-blue-950 space-y-2 my-4">
-                  <div><strong>Format Standard Response JSON:</strong></div>
-                  <pre className="text-blue-950/70">{`{
-  "success": true,
-  "message": "Data berhasil diambil",
-  "data": { ... }
-}`}</pre>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 5: DEPLOYMENT */}
-            {activeTab === "deployment-security" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-blue-950">Deployment & Keamanan</h2>
-                <p className="text-sm sm:text-base leading-relaxed text-blue-950/80">
-                  Proses otomatisasi peluncuran dan proteksi keamanan tingkat aplikasi.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                  <div className="p-5 rounded-2xl bg-white border border-blue-200/80 shadow-xs">
-                    <h3 className="text-sm font-bold text-blue-950 mb-1">CI/CD Pipeline</h3>
-                    <p className="text-xs text-blue-950/80 leading-relaxed">
-                      Otomatisasi pengujian dan peluncuran kode via Vercel / GitHub Actions setiap ada <em>push</em> ke branch <code>main</code>.
-                    </p>
-                  </div>
-                  <div className="p-5 rounded-2xl bg-white border border-blue-200/80 shadow-xs">
-                    <h3 className="text-sm font-bold text-blue-950 mb-1">Proteksi Keamanan</h3>
-                    <p className="text-xs text-blue-950/80 leading-relaxed">
-                      Enkripsi SSL/TLS 256-bit, Sanitasi input pencegah SQL Injection & XSS, serta CORS terkonfigurasi ketat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-          </article>
+          {/* Search Box untuk SEO / Navigasi cepat */}
+          <div className="relative w-full sm:w-72">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+            <input
+              type="text"
+              placeholder="Cari topik catatan..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-zinc-50 border border-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-blue-500 transition-colors text-blue-950"
+            />
+          </div>
         </div>
+
+        {/* GRID DAFTAR CATATAN (BLOG LIST) */}
+        <div className="grid grid-cols-1 gap-6">
+          {filteredNotes.length > 0 ? (
+            filteredNotes.map((note) => {
+              const Icon = note.icon;
+              return (
+                <a
+                  key={note.id}
+                  href={`/docs/${note.slug}`}
+                  className="group p-6 rounded-2xl bg-zinc-50/50 border border-zinc-200/80 hover:border-blue-300 hover:bg-white hover:shadow-xl hover:shadow-blue-950/5 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-white border border-zinc-200 shadow-xs group-hover:scale-105 group-hover:border-blue-200 transition-all shrink-0">
+                      <Icon className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 text-xs text-zinc-400 mb-2 font-medium">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" /> {note.date}
+                        </span>
+                        <span>•</span>
+                        <span>{note.readTime}</span>
+                      </div>
+                      <h2 className="text-lg sm:text-xl font-bold text-blue-950 group-hover:text-blue-600 transition-colors mb-2">
+                        {note.title}
+                      </h2>
+                      <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed max-w-2xl">
+                        {note.summary}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="self-end sm:self-center p-2 rounded-full bg-transparent group-hover:bg-blue-50 transition-colors shrink-0">
+                    <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-blue-600 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </a>
+              );
+            })
+          ) : (
+            <div className="text-center py-20 bg-zinc-50 rounded-2xl border border-zinc-200">
+              <p className="text-sm text-zinc-500">Tidak ada catatan yang cocok dengan pencarian Anda.</p>
+            </div>
+          )}
+        </div>
+
       </main>
     </div>
   );
-}
+} 

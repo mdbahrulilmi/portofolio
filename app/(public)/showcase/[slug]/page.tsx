@@ -27,7 +27,6 @@ export default async function ProjectPage({
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-      {/* Back Link */}
       <Link
         href="/showcase"
         className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:opacity-80 transition-all mb-8"
@@ -38,22 +37,18 @@ export default async function ProjectPage({
 
       <header className="border-b border-blue-100 pb-8 mb-10">
 
-        {/* Category Badge */}
         <span className="inline-flex px-3.5 py-1 rounded-md bg-blue-50 text-xs font-semibold text-blue-700 border border-blue-200 mb-4 shadow-xs">
           {project.category}
         </span>
 
-        {/* Title */}
         <h1 className="text-4xl md:text-5xl font-black tracking-tight text-blue-950">
           {project.title}
         </h1>
 
-        {/* Summary */}
         <p className="mt-4 text-base md:text-lg text-blue-950/80 leading-relaxed max-w-3xl">
           {project.summary}
         </p>
 
-        {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mt-6">
           {project.techStack?.map((tech: string) => (
             <span
@@ -65,7 +60,6 @@ export default async function ProjectPage({
           ))}
         </div>
 
-        {/* Links & Repository Status */}
         <div className="mt-8 flex flex-wrap items-center gap-4">
           {project.links?.github ? (
             <a
@@ -101,7 +95,6 @@ export default async function ProjectPage({
 
       </header>
       
-      {/* Markdown Documentation Content */}
       <article className="prose prose-blue max-w-none prose-headings:text-blue-950 prose-p:text-blue-950/80">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}

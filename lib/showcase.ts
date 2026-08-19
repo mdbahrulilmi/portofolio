@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import showcase from "@/app/(public)/showcase/content/showcase.json";
+import showcase from "@/content/showcase.json";
 
 export function getProject(slug: string) {
   const project = showcase.projects.find(
@@ -12,11 +12,8 @@ export function getProject(slug: string) {
   const markdown = fs.readFileSync(
     path.join(
       process.cwd(),
-      "app",
-      "(public)",
-      "showcase",
       "content",
-      "docs",
+      "showcase",
       project.documentation
     ),
     "utf-8"
