@@ -11,6 +11,14 @@ export default function ConnectPage() {
     subject: "",
     message: "",
   });
+  const [copied, setCopied] = useState(false);
+  const email = "mdbahrulilmi@gmail.com";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +36,6 @@ export default function ConnectPage() {
       <main className="py-8 sm:py-12 flex-1">
         <div className="max-w-6xl mx-auto px-6">
 
-          {/* Header Section */}
           <div className="mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-xs font-semibold text-blue-700 mb-4 shadow-xs">
               <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
@@ -42,14 +49,11 @@ export default function ConnectPage() {
             </p>
           </div>
 
-          {/* Main Layout (Form + Info) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            {/* FORM SECTION (Left Side) */}
             <div className="lg:col-span-7">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Name */}
                   <div>
                     <label className="block text-xs font-semibold text-blue-950 mb-2">
                       Nama Lengkap
@@ -64,7 +68,6 @@ export default function ConnectPage() {
                     />
                   </div>
 
-                  {/* Email */}
                   <div>
                     <label className="block text-xs font-semibold text-blue-950 mb-2">
                       Alamat Email
@@ -80,7 +83,6 @@ export default function ConnectPage() {
                   </div>
                 </div>
 
-                {/* Subject */}
                 <div>
                   <label className="block text-xs font-semibold text-blue-950 mb-2">
                     Subjek / Topik
@@ -95,7 +97,6 @@ export default function ConnectPage() {
                   />
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="block text-xs font-semibold text-blue-950 mb-2">
                     Pesan Anda
@@ -127,10 +128,8 @@ export default function ConnectPage() {
               </form>
             </div>
 
-            {/* INFO & DETAILS (Right Side) */}
             <div className="lg:col-span-5 space-y-8">
               
-              {/* Direct Info Card */}
               <div className="p-8 rounded-3xl bg-white border border-blue-200 space-y-6 shadow-xs">
                 <h3 className="text-sm font-bold text-blue-950 border-b border-blue-100 pb-4">
                   Informasi Kontak
@@ -143,9 +142,17 @@ export default function ConnectPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-blue-600">Email Utama</p>
-                      <a href="mailto:mdbahrulilmi@gmail.com" className="text-sm font-semibold text-blue-950 hover:underline">
-                        mdbahrulilmi@gmail.com
-                      </a>
+                      <button
+                        onClick={handleCopy}
+                        className="text-sm font-semibold text-blue-950 text-left cursor-pointer bg-transparent border-none p-0 inline-flex items-center gap-2 group transition-all"
+                        type="button"
+                        title="Klik untuk menyalin email"
+                      >
+                        <span>{email}</span>
+                        <span className={`text-[10px] font-medium transition-opacity px-1.5 py-0.5 rounded ${copied ? "bg-emerald-100 text-emerald-700 opacity-100" : "opacity-0 group-hover:opacity-100 bg-zinc-100 text-zinc-600"}`}>
+                          {copied ? "Tersalin!" : "Salin"}
+                        </span>
+                      </button>
                     </div>
                   </div>
 
@@ -174,7 +181,6 @@ export default function ConnectPage() {
                 </div>
               </div>
 
-              {/* Quick Response Promise */}
               <div className="p-6 rounded-2xl border border-blue-200 bg-white flex items-start gap-4 shadow-xs">
                 <div className="p-2.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 shrink-0">
                   <Sparkles className="w-5 h-5" />
