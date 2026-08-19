@@ -1,0 +1,42 @@
+{
+  "header": {
+    "badge": "Layanan & Solusi",
+    "title": "Apa yang Bisa Saya Bangun untuk Anda",
+    "description": "Solusi digital end-to-end yang dirancang khusus untuk mendongkrak efisiensi operasional dan kehadiran online bisnis Anda.",
+    "actionText": "Lihat Contoh di Showcase"
+  },
+  "services": [
+    {
+      "icon": "Building2",
+      "category": "Web Development",
+      "title": "Membuat Company Profile Profesional",
+      "description": "Website perusahaan yang elegan, responsif, SEO-friendly, dan dirancang untuk membangun kredibilitas serta kepercayaan klien.",
+      "tags": ["Next.js", "TailwindCSS", "SEO Optimized", "CMS Integration"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Cpu",
+      "category": "Fullstack System",
+      "title": "Membuat Sistem Terintegrasi",
+      "description": "Aplikasi web kompleks seperti ERP, dashboard manajemen inventaris, atau SaaS yang menghubungkan database, API, dan pembayaran.",
+      "tags": ["React", "Node.js", "PostgreSQL", "REST/GraphQL API"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Bot",
+      "category": "Automation",
+      "title": "Membuat Bot & Integrasi AI",
+      "description": "Otomatisasi alur kerja bisnis menggunakan bot chat (WhatsApp/Telegram), scraper data, atau integrasi kecerdasan buatan (AI).",
+      "tags": ["Python", "Node.js", "AI API", "Webhooks"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Globe",
+      "category": "Web App",
+      "title": "Custom Web Application",
+      "description": "Pengembangan aplikasi web kustom dari awal hingga tahap deployment sesuai dengan kebutuhan unik bisnis Anda.",
+      "tags": ["Fullstack", "Docker", "Cloud Deployment", "CI/CD"],
+      "link": "/showcase"
+    }
+  ]
+}

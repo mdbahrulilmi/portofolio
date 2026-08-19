@@ -1,0 +1,42 @@
+{
+  "header": {
+    "badge": "Services & Solutions",
+    "title": "What I Can Build For You",
+    "description": "End-to-end digital solutions custom-engineered to boost operational efficiency and elevate your brand's online presence.",
+    "actionText": "View Examples in Showcase"
+  },
+  "services": [
+    {
+      "icon": "Building2",
+      "category": "Web Development",
+      "title": "Professional Company Profiles",
+      "description": "Sleek, responsive, SEO-friendly corporate websites designed to build instant credibility and win client trust.",
+      "tags": ["Next.js", "TailwindCSS", "SEO Optimized", "CMS Integration"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Cpu",
+      "category": "Fullstack System",
+      "title": "Integrated Systems & SaaS",
+      "description": "Complex web applications like ERPs, inventory management dashboards, or SaaS products connecting databases, APIs, and payments.",
+      "tags": ["React", "Node.js", "PostgreSQL", "REST/GraphQL API"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Bot",
+      "category": "Automation",
+      "title": "Bots & AI Integrations",
+      "description": "Business workflow automation using chat bots (WhatsApp/Telegram), data scrapers, or custom artificial intelligence integrations.",
+      "tags": ["Python", "Node.js", "AI API", "Webhooks"],
+      "link": "/showcase"
+    },
+    {
+      "icon": "Globe",
+      "category": "Web App",
+      "title": "Custom Web Applications",
+      "description": "Tailor-made web application development from scratch all the way to production deployment to match your unique business needs.",
+      "tags": ["Fullstack", "Docker", "Cloud Deployment", "CI/CD"],
+      "link": "/showcase"
+    }
+  ]
+}

@@ -12,13 +12,11 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Cek menu mana yang sedang aktif
   const isActive = (path: string) => {
     if (path === "/") return pathname === "/";
     return pathname?.startsWith(path);
   };
 
-  // Kamus teks Navbar berdasarkan bahasa (ID / EN)
   const navText = {
     id: {
       about: "Tentang",
@@ -40,7 +38,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/85 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         
-        {/* Brand / Logo */}
         <div className="flex-1">
           <Link 
             href="/" 
@@ -50,10 +47,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-6 text-sm font-semibold text-blue-950/80">
-            {/* Language Switcher */}
             <li className="flex items-center gap-1 p-1 bg-white rounded-full border border-blue-200 shadow-xs">
               <button
                 onClick={() => setLang("id")}
@@ -77,7 +72,6 @@ export default function Navbar() {
               </button>
             </li>
 
-            {/* Menu Links dengan Garis Bawah Biru jika Aktif */}
             <li>
               <Link 
                 href="/about" 
@@ -129,9 +123,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Mobile Nav Toggle */}
         <div className="flex items-center gap-3 md:hidden">
-          {/* Mobile Language Switcher */}
           <div className="flex items-center gap-1 p-1 bg-white rounded-full border border-blue-200 shadow-xs">
             <button
               onClick={() => setLang("id")}
@@ -180,7 +172,6 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden border-t border-blue-100 bg-white/95 backdrop-blur-md px-6 py-6 transition-all shadow-xl">
           <ul className="flex flex-col gap-4 text-sm font-semibold text-blue-950/80">

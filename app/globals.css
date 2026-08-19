@@ -14,17 +14,7 @@ body {
 }
 
 .prose, 
-.prose *, 
-.prose p, 
-.prose ul, 
-.prose ol, 
-.prose li, 
-.prose h1, 
-.prose h2, 
-.prose h3, 
-.prose h4, 
-.prose h5, 
-.prose h6 {
+.prose * {
   color: #020817 !important;
 }
 
@@ -34,4 +24,19 @@ body {
 
 .prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
   color: #020817 !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
