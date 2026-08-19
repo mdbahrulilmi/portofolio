@@ -12,3 +12,26 @@ body {
   background-color: #ffffff;
   color: #020817;
 }
+
+.prose, 
+.prose *, 
+.prose p, 
+.prose ul, 
+.prose ol, 
+.prose li, 
+.prose h1, 
+.prose h2, 
+.prose h3, 
+.prose h4, 
+.prose h5, 
+.prose h6 {
+  color: #020817 !important;
+}
+
+.prose :where(ul > li):not(:where([class~="not-prose"] *))::marker {
+  color: #020817 !important;
+}
+
+.prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
+  color: #020817 !important;
+}

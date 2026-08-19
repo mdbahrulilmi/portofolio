@@ -18,6 +18,24 @@ export default function Navbar() {
     return pathname?.startsWith(path);
   };
 
+  // Kamus teks Navbar berdasarkan bahasa (ID / EN)
+  const navText = {
+    id: {
+      about: "Tentang",
+      showcase: "Portofolio",
+      docs: "Dokumentasi",
+      connect: "Hubungi",
+    },
+    en: {
+      about: "About",
+      showcase: "Showcase",
+      docs: "Docs",
+      connect: "Connect",
+    },
+  };
+
+  const t = navText[lang];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/85 backdrop-blur-md transition-all shadow-[0_4px_20px_-4px_rgba(59,130,246,0.06)]">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
@@ -69,7 +87,7 @@ export default function Navbar() {
                     : "hover:text-blue-600"
                 }`}
               >
-                About
+                {t.about}
               </Link>
             </li>
             <li>
@@ -81,7 +99,7 @@ export default function Navbar() {
                     : "hover:text-blue-600"
                 }`}
               >
-                Showcase
+                {t.showcase}
               </Link>
             </li>
             <li>
@@ -93,7 +111,7 @@ export default function Navbar() {
                     : "hover:text-blue-600"
                 }`}
               >
-                Docs
+                {t.docs}
               </Link>
             </li>
             <li>
@@ -105,7 +123,7 @@ export default function Navbar() {
                     : "border-blue-200 bg-blue-600 text-white hover:bg-blue-500"
                 }`}
               >
-                Connect
+                {t.connect}
               </Link>
             </li>
           </ul>
@@ -172,7 +190,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/about") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
-                About
+                {t.about}
               </Link>
             </li>
             <li>
@@ -181,7 +199,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/showcase") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
-                Showcase
+                {t.showcase}
               </Link>
             </li>
             <li>
@@ -190,7 +208,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 transition-colors ${isActive("/docs") ? "text-blue-600 font-bold" : "hover:text-blue-600"}`}
               >
-                Docs
+                {t.docs}
               </Link>
             </li>
             <li className="pt-2">
@@ -199,7 +217,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="block text-center w-full px-4 py-2.5 rounded-full border border-blue-200 bg-blue-600 shadow-xs text-white hover:bg-blue-500 transition-all"
               >
-                Connect
+                {t.connect}
               </Link>
             </li>
           </ul>
