@@ -1,13 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, FolderGit2 } from "lucide-react";
+import { FolderGit2 } from "lucide-react";
+import { useLanguage } from "@/app/(public)/providers/LanguageProvider";
 import showcase from "@/content/showcase.json";
 import ShowcaseCard from "./components/ShowcaseCard";
 
-export default function ShowcasePage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+const uiText = {
+  id: {
+    title: "Kumpulan Proyek Pilihan",
+    subtitle: "Eksplorasi mendalam mengenai hasil karya rekayasa perangkat lunak, sistem backend berperforma tinggi, dan aplikasi web modern.",
+    allCategory: "Semua",
+    emptyCategory: "Belum ada proyek dalam kategori",
+  },
+  en: {
+    title: "Featured Projects Showcase",
+    subtitle: "In-depth exploration of software engineering masterpieces, high-performance backend systems, and modern web applications.",
+    allCategory: "All",
+    emptyCategory: "No projects found in category",
+  },
+};
 
+export default function ShowcasePage() {
+  const { lang } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const t = uiText[lang];
   const projects = showcase.projects;
 
   const categories = [
@@ -29,17 +47,19 @@ export default function ShowcasePage() {
 
         <div className="mb-12 md:mb-16">
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6 text-blue-950">
-            Kumpulan Proyek Pilihan<span className="text-blue-500">.</span>
+            {t.title}<span className="text-blue-500">.</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-blue-950/80 leading-relaxed font-normal max-w-3xl">
-            Eksplorasi mendalam mengenai hasil karya rekayasa perangkat lunak, sistem backend berperforma tinggi, dan aplikasi web modern.
+            {t.subtitle}
           </p>
         </div>
         
         <div className="flex flex-wrap items-center gap-2 mb-12 p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xs w-fit">
           {categories.map((category) => {
+            const displayLabel = category === "All" && lang === "id" ? t.allCategory : category;
             const isActive = activeCategory === category;
+
             return (
               <button
                 key={category}
@@ -50,13 +70,12 @@ export default function ShowcasePage() {
                     : "bg-white text-blue-950/70 hover:text-blue-950 hover:bg-blue-50"
                 }`}
               >
-                {category}
+                {displayLabel}
               </button>
             );
           })}
         </div>
 
-        {/* Project Grid */}
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {filteredProjects.map((project, index) => {
@@ -78,7 +97,7 @@ export default function ShowcasePage() {
           <div className="text-center py-24 border border-dashed border-blue-200 rounded-3xl bg-white">
             <FolderGit2 className="w-10 h-10 mx-auto text-blue-400 mb-3 opacity-50" />
             <p className="text-blue-950/70 text-sm font-medium">
-              Belum ada proyek dalam kategori <span className="text-blue-600 font-semibold">{activeCategory}</span>.
+              {t.emptyCategory} <span className="text-blue-600 font-semibold">{activeCategory}</span>.
             </p>
           </div>
         )}
