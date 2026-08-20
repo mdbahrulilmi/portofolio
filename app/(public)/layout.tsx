@@ -128,7 +128,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="id" suppressHydrationWarning className="h-full antialiased">
       <head>
         <script
           type="application/ld+json"

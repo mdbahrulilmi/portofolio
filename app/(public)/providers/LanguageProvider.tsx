@@ -18,16 +18,18 @@ export function LanguageProvider({
 }){
     const [lang, setLang] = useState<Lang>("id");
 
-    useEffect(()=> {
+    useEffect(() => {
         const saved = localStorage.getItem("lang") as Lang | null;
-
         if (saved) {
-            setLang(saved)
+            setLang(saved);
         }
     }, []);
 
-    useEffect(()=> {
-        localStorage.setItem("lang", lang)
+    // SETIAP KALI `lang` BERUBAH, UPDATE ATRIBUT HTML SECARA OTOMATIS
+    useEffect(() => {
+        localStorage.setItem("lang", lang);
+        // Ini kuncinya agar browser tahu bahasa apa yang sedang aktif!
+        document.documentElement.lang = lang; 
     }, [lang]);
 
     return(
@@ -44,5 +46,5 @@ export function useLanguage(){
         throw new Error("useLanguage must be used inside LanguageProvider");
     }
 
-    return context
+    return context;
 }

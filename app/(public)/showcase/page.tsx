@@ -45,7 +45,8 @@ export default function ShowcasePage() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-blue-500/10 blur-[140px] pointer-events-none rounded-full" />
       <div className="relative max-w-6xl mx-auto px-6">
 
-        <div className="mb-12 md:mb-16">
+        {/* Header statis diberi translate="no" karena sudah diterjemahkan manual lewat code */}
+        <div className="mb-12 md:mb-16" translate="no">
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-6 text-blue-950">
             {t.title}<span className="text-blue-500">.</span>
           </h1>
@@ -55,7 +56,8 @@ export default function ShowcasePage() {
           </p>
         </div>
         
-        <div className="flex flex-wrap items-center gap-2 mb-12 p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xs w-fit">
+        {/* Tombol kategori juga dikunci agar tidak berubah acak oleh browser */}
+        <div className="flex flex-wrap items-center gap-2 mb-12 p-1.5 rounded-2xl bg-white border border-blue-200 shadow-xs w-fit" translate="no">
           {categories.map((category) => {
             const displayLabel = category === "All" && lang === "id" ? t.allCategory : category;
             const isActive = activeCategory === category;
@@ -76,6 +78,7 @@ export default function ShowcasePage() {
           })}
         </div>
 
+        {/* Bagian Proyek dibiarkan dinamis agar bisa diterjemahkan otomatis oleh browser */}
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {filteredProjects.map((project, index) => {
@@ -94,7 +97,7 @@ export default function ShowcasePage() {
             })}
           </div>
         ) : (
-          <div className="text-center py-24 border border-dashed border-blue-200 rounded-3xl bg-white">
+          <div className="text-center py-24 border border-dashed border-blue-200 rounded-3xl bg-white" translate="no">
             <FolderGit2 className="w-10 h-10 mx-auto text-blue-400 mb-3 opacity-50" />
             <p className="text-blue-950/70 text-sm font-medium">
               {t.emptyCategory} <span className="text-blue-600 font-semibold">{activeCategory}</span>.
