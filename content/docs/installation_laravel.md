@@ -2,50 +2,149 @@
 title: "Installing Laravel"
 category: "Laravel"
 date: "2026-08-19"
+
 ---
 
-# **How To Install Laravel**
+# Cara Install Laravel
 
-Before creating your first Laravel application, make sure that your local machine has PHP, Composer, and the Laravel installer installed. In addition, you should install either Node and NPM or Bun so that you can compile your application's frontend assets.
+Sebelum membuat aplikasi Laravel pertama Anda, pastikan **PHP**, **Composer**, dan **Laravel Installer** sudah terpasang di komputer. Selain itu, Anda juga membutuhkan **Node.js & NPM** atau **Bun** untuk mengelola dan melakukan build frontend assets.
 
-If you don't have PHP and Composer installed on your local machine, the following commands will install PHP, Composer, and the Laravel installer on macOS, Windows, or Linux:
+## 1. Install PHP, Composer, dan Laravel Installer
 
-### **macOS**
+Ada beberapa cara untuk menyiapkan environment Laravel. Berikut dua opsi yang bisa digunakan.
+
+### Opsi 1 — Install menggunakan `php.new`
+
+Cara ini paling praktis karena PHP, Composer, dan Laravel Installer dapat dipasang sekaligus.
+
+#### macOS
+
 ```bash
-/bin/bash -c "$(curl -fsSL [https://php.new/install/mac/8.5](https://php.new/install/mac/8.5))"
+/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.5)"
 ```
 
-### **windows**
-```bash
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('[https://php.new/install/windows](https://php.new/install/windows)'))
+#### Windows
+
+Jalankan **PowerShell** sebagai administrator:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows'))
 ```
 
-### **linux**
+#### Linux
+
 ```bash
-/bin/bash -c "$(curl -fsSL [https://php.new/install/linux/8.5](https://php.new/install/linux/8.5))"
+/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.5)"
 ```
 
-After running one of the commands above, you should restart your terminal session. To update PHP, Composer, and the Laravel installer after installing them via php.new, you can re-run the command in your terminal.
+Setelah proses instalasi selesai, **restart terminal** agar perubahan environment dapat diterapkan.
 
-If you already have PHP and Composer installed, you may install the Laravel installer via Composer:
+Jika PHP, Composer, dan Laravel Installer sudah pernah dipasang menggunakan `php.new`, Anda dapat menjalankan kembali perintah tersebut untuk memperbarui instalasinya.
 
-```Bash
+---
+
+### Opsi 2 — Install Laravel Installer secara global menggunakan Composer
+
+Jika **PHP dan Composer sudah terpasang**, Laravel Installer dapat di-install secara global menggunakan Composer:
+
+```bash
 composer global require laravel/installer
 ```
-For a fully-featured, graphical PHP installation and management experience, check out Laravel Herd.
 
-Creating an Application
-After you have installed PHP, Composer, and the Laravel installer, you are ready to create a new Laravel application:
+Setelah proses selesai, pastikan Laravel Installer dapat dipanggil dari terminal:
 
-```Bash
+```bash
+laravel --version
+```
+
+Jika perintah `laravel` tidak ditemukan, pastikan direktori Composer global sudah masuk ke dalam `PATH` sistem Anda.
+
+> **Catatan:** Opsi ini hanya memasang Laravel Installer. PHP dan Composer harus sudah tersedia terlebih dahulu.
+
+---
+
+## 2. Install Node.js dan NPM
+
+Laravel menggunakan **Vite** untuk mengelola dan melakukan build frontend assets.
+
+Pastikan **Node.js dan NPM** sudah terpasang:
+
+```bash
+node --version
+npm --version
+```
+
+Jika Anda lebih memilih Bun, Anda juga dapat menggunakannya sebagai alternatif NPM.
+
+---
+
+## 3. Membuat Aplikasi Laravel
+
+Setelah PHP, Composer, Laravel Installer, dan Node.js/NPM tersedia, Anda dapat membuat aplikasi Laravel baru menggunakan:
+
+```bash
 laravel new example-app
 ```
 
-Once the application has been created, you can start Laravel's local development server, queue worker, and Vite development server using the dev Composer script:
+Ganti `example-app` dengan nama aplikasi yang ingin dibuat.
 
-```Bash
+Contoh:
+
+```bash
+laravel new toko-online
+```
+
+Laravel Installer kemudian akan membantu menyiapkan project Laravel baru.
+
+---
+
+## 4. Menjalankan Aplikasi Laravel
+
+Masuk ke direktori project:
+
+```bash
 cd example-app
+```
+
+Install dependency frontend dan lakukan build:
+
+```bash
 npm install && npm run build
+```
+
+Kemudian jalankan development server Laravel:
+
+```bash
 composer run dev
 ```
-Once you have started the development server, you can access your application in your web browser at **http://localhost:8000**. Next, you're ready to start taking your next steps into the Laravel ecosystem. Of course, you may also want to configure a database and run the necessary migrations.
+
+Perintah tersebut akan menjalankan environment development Laravel, termasuk server aplikasi dan proses yang diperlukan untuk pengembangan frontend.
+
+Setelah server berjalan, buka browser dan akses:
+
+```text
+http://localhost:8000
+```
+
+Jika halaman Laravel tampil, berarti instalasi dan project Laravel Anda sudah berhasil dibuat.
+
+---
+
+## 5. Langkah Berikutnya
+
+Setelah aplikasi berhasil dijalankan, Anda biasanya perlu mengatur beberapa hal berikut:
+
+* Konfigurasi database pada file `.env`
+* Membuat dan menjalankan migration
+* Membuat model dan controller
+* Mengatur routing
+* Membuat authentication
+* Mengembangkan frontend menggunakan Blade, React, Vue, atau teknologi frontend lainnya
+
+Contoh menjalankan migration:
+
+```bash
+php artisan migrate
+```
+
+Selamat! Anda sudah siap mulai mengembangkan aplikasi menggunakan Laravel.
