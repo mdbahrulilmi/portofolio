@@ -21,7 +21,9 @@ body {
 
 .prose code{
   color: #fff !important;
+  background-color: #162456 !important;
 }
+
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
