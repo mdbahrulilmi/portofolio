@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://mdbahrulilmi.my.id/sitemap.xml',
+    sitemap: 'https://www.mdbahrulilmi.my.id/sitemap.xml',
   }
 }
