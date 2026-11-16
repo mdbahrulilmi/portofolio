@@ -1,5 +1,5 @@
 ---
-title: "Mengenal Docker: Panduan Lengkap Konsep, Arsitektur, dan Cara Penggunaannya"
+title: "Apa itu Docker?"
 category: "DevOps"
 date: "2026-11-16"
 ---
