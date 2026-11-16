@@ -34,7 +34,7 @@ Sebelum mulai menggunakannya, Anda perlu memahami beberapa istilah inti dalam ek
 ## Perbedaan Docker Container vs Virtual Machine
 
 | Fitur | Docker Container | Virtual Machine (VM) |
-| :--- | :--- | :--- |
+|---|---|---|
 | **Sistem Operasi** | Berbagi kernel OS host | Menjalankan OS penuh (*Guest OS*) di tiap VM |
 | **Ukuran** | Ringan (dalam hitungan Megabyte) | Berat (dalam Gigabyte) |
 | **Kecepatan Boot** | Cepat (hitungan detik) | Lambat (menit) |

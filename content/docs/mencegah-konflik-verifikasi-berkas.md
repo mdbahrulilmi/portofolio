@@ -1,10 +1,10 @@
 ---
-title: "Implementasi Concurrent Verification Lock pada Laravel untuk Mencegah Konflik Verifikasi Data"
+title: "Mencegah Konflik Verifikasi Berkas"
 category: "Laravel"
 date: "2026-11-04"
 ---
 
-# Implementasi Concurrent Verification Lock pada Laravel untuk Mencegah Konflik Verifikasi Data
+# Implementasi Concurrent Verification Lock pada Laravel untuk Mencegah Konflik Verifikasi Berkas
 
 Dalam pengembangan sistem SPMB (Seleksi Penerimaan Murid Baru), terdapat tantangan yang perlu diperhatikan ketika aplikasi digunakan oleh banyak operator secara bersamaan.
 

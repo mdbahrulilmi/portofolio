@@ -33,15 +33,13 @@ Secara tradisional, Apache menjalankan PHP menggunakan modul `mod_php` atau mela
 ## Tabel Perbandingan: FrankenPHP vs Apache
 
 | Fitur / Aspek | FrankenPHP | Apache (dengan PHP-FPM / mod_php) |
-| :--- | :--- | :--- |
+|---|---|---|
 | **Bahasa Pemrograman** | Go (Golang) & PHP | C / C++ |
-| **Model Eksekusi** | *Worker Mode* (Persistent memory) & Request-based | *Request-based* (Memuat ulang *script* tiap *request*) |
-| **Performa & Kecepatan** | **Sangat Tinggi** (karena aplikasi tetap ada di memori RAM) | Standar / Cukup cepat, namun ada *overhead* saat *booting* |
-| **Dukungan HTTP/3 & QUIC** | **Native / Otomatis** | Memerlukan konfigurasi dan modul tambahan yang kompleks |
-| **SSL / HTTPS Otomatis** | **Ya** (Didukung penuh oleh Caddy, Let's Encrypt otomatis) | Manual (biasanya dibantu Certbot) |
+| **Model Eksekusi** | **Worker Mode** (Persistent Memory) & Request-based | **Request-based** (Memuat ulang script setiap request) |
+| **Performa & Kecepatan** | **Sangat Tinggi** (karena aplikasi tetap berada di memori RAM) | Standar / Cukup cepat, tetapi memiliki overhead saat booting |
+| **Dukungan HTTP/3 & QUIC** | **Native / Otomatis** | Memerlukan konfigurasi dan modul tambahan |
+| **SSL / HTTPS Otomatis** | **Ya** (Didukung Caddy, Let's Encrypt otomatis) | Manual (biasanya dibantu Certbot) |
 | **Kematangan & Ekosistem** | Relatif baru, berkembang sangat pesat | Sangat matang, dokumentasi dan modul melimpah |
-
----
 
 ## Perbedaan Utama yang Perlu Anda Ketahui
 

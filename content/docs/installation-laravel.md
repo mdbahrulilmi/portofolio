@@ -1,11 +1,11 @@
 ---
-title: "Installing Laravel"
+title: "Cara Menginstall laravel"
 category: "Laravel"
 date: "2026-08-19"
 
 ---
 
-# Cara Install Laravel
+# Cara Install Laravel dari Awal Hingga Siap Dijalankan
 
 Sebelum membuat aplikasi Laravel pertama Anda, pastikan **PHP**, **Composer**, dan **Laravel Installer** sudah terpasang di komputer. Selain itu, Anda juga membutuhkan **Node.js & NPM** atau **Bun** untuk mengelola dan melakukan build frontend assets.
 

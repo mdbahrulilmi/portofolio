@@ -6,7 +6,9 @@ import { usePathname } from "next/navigation";
 import { useLanguage } from "../../providers/LanguageProvider";
 import Image from "next/image";
 
-type Doc = { slug: string; title: string; category: string };
+type Doc = {
+  date: string | number | Date; slug: string; title: string; category: string 
+};
 
 export default function DocsSidebar({
   groupedDocs,
@@ -36,17 +38,23 @@ export default function DocsSidebar({
   };
 
   const t = ui[lang];
-  const categories = Object.keys(groupedDocs);
+
+  const categories = useMemo(() => {
+    return Object.keys(groupedDocs).sort((a, b) => a.localeCompare(b));
+  }, [groupedDocs]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return groupedDocs;
     const result: Record<string, Doc[]> = {};
+    
     for (const cat of categories) {
-      const docs = groupedDocs[cat].filter(d =>
-        d.title.toLowerCase().includes(q)
-      );
-      if (docs.length) result[cat] = docs;
+      const docs = groupedDocs[cat]
+        .filter(d => !q || d.title.toLowerCase().includes(q))
+        .sort((a, b) => new Date(a.date).getTime() -  new Date(b.date).getTime());
+
+        console.log(docs);
+
+      if (docs.length > 0) result[cat] = docs;
     }
     return result;
   }, [query, groupedDocs, categories]);

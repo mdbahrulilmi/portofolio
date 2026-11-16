@@ -21,7 +21,7 @@ export default function DocsIndexPage() {
   const t = content[lang];
 
   return (
-    <article className="prose-none">
+    <article className="prose prose-table:border-collapse prose-th:border prose-th:p-3 prose-td:border prose-td:p-3 max-w-none">
       <p className="text-sm font-semibold tracking-wider uppercase text-blue-600 mb-2">
         {t.badge}
       </p>

@@ -15,13 +15,13 @@ body {
 
 .prose, 
 .prose * {
-  color: #162456 !important;
-  border-color: #162456 !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
 }
 
 .prose code{
   color: #fff !important;
-  background-color: #162456 !important;
+  background-color: #000000 !important;
 }
 
 

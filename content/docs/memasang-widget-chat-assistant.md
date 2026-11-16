@@ -1,5 +1,5 @@
 ---
-title: "Memasang Widget Chat Assistant di Website"
+title: "Memasang Chat Assistant di Website"
 category: "Integrasi"
 date: "2026-11-03"
 ---

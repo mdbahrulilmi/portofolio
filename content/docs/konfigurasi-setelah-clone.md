@@ -1,10 +1,10 @@
 ---
-title: "Cloning Laravel"
+title: "Konfigurasi setelah clone dari github"
 category: "Laravel"
 date: "2026-08-20"
 ---
 
-# Instalasi Laravel dari Repository Git
+# Instalasi dan Konfigurasi Laravel dari Repository Git
 
 Jika project Laravel sudah tersedia di repository Git, Anda tidak perlu membuat project baru menggunakan `laravel new`. Cukup **clone repository**, install dependency, kemudian konfigurasi environment aplikasi.
 
